@@ -315,6 +315,68 @@ input,textarea,select{font-family:inherit;outline:none}
 /* ── RESPONSIVE ──────────────────────────────────── */
 @media(max-width:360px){.pgrid,.dcards{grid-template-columns:1fr}.qagrid{grid-template-columns:repeat(3,1fr)}}
 
+/* ════════ PREMIUM FEATURES CSS ════════ */
+.sub-expiry-banner{display:none;align-items:center;gap:10px;padding:10px 16px;background:linear-gradient(90deg,rgba(245,158,11,.15),rgba(239,68,68,.12));border-bottom:2px solid rgba(245,158,11,.4);font-size:12px;font-weight:700;color:#fbbf24;cursor:pointer;animation:pulseBanner 2.5s ease-in-out infinite}
+.sub-expiry-banner.show{display:flex}
+.sub-expiry-banner.critical{background:linear-gradient(90deg,rgba(239,68,68,.2),rgba(220,38,38,.15));border-bottom-color:rgba(239,68,68,.5);color:#f87171;animation:pulseBanner 1.2s ease-in-out infinite}
+@keyframes pulseBanner{0%,100%{opacity:1}50%{opacity:.75}}
+.seb-icon{font-size:18px;flex-shrink:0}
+.seb-text{flex:1;line-height:1.4}
+.seb-close{width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;font-size:12px;cursor:pointer;flex-shrink:0}
+
+.toggle{width:44px;height:26px;border-radius:999px;background:var(--bdr2);position:relative;cursor:pointer;transition:background .2s;flex-shrink:0}
+.toggle::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:#fff;top:3px;left:3px;transition:left .2s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
+.toggle.on{background:var(--g2)}
+.toggle.on::after{left:21px}
+
+.chart-bar-wrap{display:flex;align-items:flex-end;gap:4px;height:80px;padding:0 0 4px}
+.chart-bar{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(180deg,var(--g2),var(--g1));min-width:8px;transition:height .5s ease;position:relative;cursor:pointer}
+.chart-bar::after{content:attr(data-val);position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:700;color:var(--t3);white-space:nowrap;opacity:0;transition:opacity .15s}
+.chart-bar:hover::after{opacity:1}
+.chart-labels{display:flex;gap:4px;padding-top:4px}
+.chart-label{flex:1;text-align:center;font-size:8px;color:var(--t3);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+.promo-badge-lbl{background:linear-gradient(135deg,#ef4444,#dc2626);color:#fff;border-radius:8px;padding:4px 10px;font-size:11px;font-weight:800;letter-spacing:.5px;display:inline-block}
+.promo-code-box{border:2px dashed var(--gold);border-radius:8px;padding:12px 14px;font-size:16px;font-weight:800;color:var(--gold);background:var(--gold3);width:100%;letter-spacing:3px;text-transform:uppercase;text-align:center;font-family:monospace}
+
+.client-card{background:var(--card);border-radius:var(--r16);padding:var(--s4);margin:var(--s3) var(--s4);box-shadow:var(--sh2);border:1px solid var(--bdr)}
+.client-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--g2),var(--g1));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:18px;font-weight:800;color:#fff;flex-shrink:0}
+.client-stat{text-align:center;flex:1;padding:var(--s2)}
+.client-stat-v{font-family:var(--fh);font-size:18px;font-weight:800;color:var(--t1)}
+.client-stat-l{font-size:10px;color:var(--t3);font-weight:600;text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+
+.loyalty-card{background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:var(--r16);padding:var(--s4);margin:0 var(--s4) var(--s3);position:relative;overflow:hidden;box-shadow:var(--shg)}
+.loyalty-card::before{content:'★';position:absolute;right:-10px;top:-15px;font-size:80px;opacity:.08;color:#000}
+.lc-title{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:rgba(0,0,0,.45)}
+.lc-pts{font-family:var(--fh);font-size:40px;font-weight:800;color:#3d2800;line-height:1.1}
+.lc-sub{font-size:12px;color:rgba(0,0,0,.45);margin-top:2px}
+.lc-bar{height:6px;background:rgba(0,0,0,.12);border-radius:999px;margin-top:var(--s3);overflow:hidden}
+.lc-fill{height:100%;background:rgba(0,0,0,.3);border-radius:999px;transition:width .6s ease}
+
+.notif-item{display:flex;align-items:flex-start;gap:12px;padding:var(--s3);background:var(--card);border-radius:var(--r12);margin-bottom:var(--s2);border:1px solid var(--bdr);box-shadow:var(--sh1);transition:all .15s}
+.notif-item.unread{border-left:3px solid var(--g2);background:rgba(26,158,114,.03)}
+.notif-ico{width:40px;height:40px;border-radius:var(--r8);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.notif-body{flex:1}
+.notif-title{font-size:13px;font-weight:700;color:var(--t1)}
+.notif-msg{font-size:12px;color:var(--t2);margin-top:2px;line-height:1.4}
+.notif-time{font-size:10px;color:var(--t3);margin-top:4px}
+
+.ticket-preview{background:#fff;border-radius:var(--r8);padding:16px;font-family:'Courier New',monospace;font-size:11px;color:#111;line-height:1.7;box-shadow:var(--sh2);max-width:280px;margin:0 auto;border:1px solid var(--bdr)}
+
+.live-dot{width:8px;height:8px;border-radius:50%;background:#34d399;animation:livePulse 1.5s ease-in-out infinite;flex-shrink:0}
+@keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(52,211,153,.4)}50%{box-shadow:0 0 0 5px rgba(52,211,153,0)}}
+
+.sale-hist-item{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);border:1px solid var(--bdr);box-shadow:var(--sh1)}
+.shi-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.shi-date{font-size:11px;color:var(--t3);font-weight:600}
+.shi-total{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--g2)}
+
+.adm-tabs-scroll{display:flex;background:#0d0d1a;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;overflow-x:auto;scrollbar-width:none}
+.adm-tabs-scroll::-webkit-scrollbar{display:none}
+
+#scr-history,#scr-clients,#scr-promos,#scr-notifications{display:none;flex-direction:column;min-height:100vh;padding-bottom:var(--bot);animation:fadeUp .25s ease}
+#scr-history.active,#scr-clients.active,#scr-promos.active,#scr-notifications.active{display:flex}
+
 /* ════════════ ADMIN PANEL ════════════ */
 #admin-overlay{position:fixed;inset:0;z-index:2000;display:none;flex-direction:column;background:#0a0f0d}
 #admin-overlay.open{display:flex}
@@ -398,6 +460,13 @@ input,textarea,select{font-family:inherit;outline:none}
 <div id="offbanner">
   <svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18.364 5.636a9 9 0 010 12.728M3 3l18 18"/></svg>
   Mode hors ligne · Données sauvegardées localement
+</div>
+
+<!-- BANNIÈRE EXPIRATION ABONNEMENT -->
+<div id="sub-expiry-banner" class="sub-expiry-banner" onclick="go('settings')">
+  <span class="seb-icon">⚠️</span>
+  <span class="seb-text" id="sub-expiry-text">Votre abonnement expire bientôt</span>
+  <span class="seb-close" onclick="event.stopPropagation();this.parentElement.classList.remove('show')">✕</span>
 </div>
 <div id="toasts"></div>
 <div id="loader"><div class="spin"></div></div>
@@ -495,11 +564,15 @@ input,textarea,select{font-family:inherit;outline:none}
   </div>
   <div class="section">
     <div class="stitle">Actions rapides</div>
-    <div class="qagrid">
+    <div class="qagrid" style="grid-template-columns:repeat(4,1fr)">
       <div class="qa" onclick="openAddProduct()"><div class="qaico" style="background:rgba(26,158,114,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#1A9E72" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div><span class="qal">Ajouter produit</span></div>
       <div class="qa" onclick="go('orders')"><div class="qaico" style="background:rgba(33,150,243,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#2196F3" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/></svg></div><span class="qal">Commandes</span></div>
       <div class="qa" onclick="go('qrcode')"><div class="qaico" style="background:rgba(201,168,76,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><span class="qal">QR Code</span></div>
       <div class="qa" onclick="go('stats')"><div class="qaico" style="background:rgba(139,90,43,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#8B5A2B" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><span class="qal">Stats</span></div>
+      <div class="qa" onclick="go('history')"><div class="qaico" style="background:rgba(139,92,246,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#7C3AED" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><span class="qal">Historique</span></div>
+      <div class="qa" onclick="go('clients')"><div class="qaico" style="background:rgba(6,182,212,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><span class="qal">Clients</span></div>
+      <div class="qa" onclick="go('promos')"><div class="qaico" style="background:rgba(239,68,68,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#EF4444" stroke-width="2"><path d="M7 7h.01M17 17h.01M3.5 3.5l17 17M9 3H5a2 2 0 00-2 2v4M15 3h4a2 2 0 012 2v4M3 15v4a2 2 0 002 2h4M15 21h4a2 2 0 002-2v-4"/></svg></div><span class="qal">Promos</span></div>
+      <div class="qa" onclick="sendDayReport()"><div class="qaico" style="background:rgba(37,211,102,.1)"><svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></div><span class="qal">Rapport WA</span></div>
     </div>
   </div>
   <div class="section">
@@ -666,6 +739,37 @@ input,textarea,select{font-family:inherit;outline:none}
       <div class="sinfo"><div class="slabel">Statistiques</div><div class="sdesc">Analysez vos ventes</div></div>
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
     </div>
+    <div class="srow2" onclick="go('history')">
+      <div class="sico" style="background:rgba(139,92,246,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7C3AED" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Historique des ventes</div><div class="sdesc">Graphiques & transactions</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('clients')">
+      <div class="sico" style="background:rgba(6,182,212,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Gestion clients</div><div class="sdesc">CRM · Fidélisation</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('promos')">
+      <div class="sico" style="background:rgba(239,68,68,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#EF4444" stroke-width="2"><path d="M7 7h.01M17 17h.01M3.5 3.5l17 17"/></svg></div>
+      <div class="sinfo"><div class="slabel">Codes promotionnels</div><div class="sdesc">Réductions & offres spéciales</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="exportInventoryCSV()">
+      <div class="sico" style="background:rgba(16,185,129,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#10B981" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Export inventaire CSV</div><div class="sdesc">Télécharger la liste de produits</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="backupData()">
+      <div class="sico" style="background:rgba(201,168,76,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg></div>
+      <div class="sinfo"><div class="slabel">Sauvegarder mes données</div><div class="sdesc">Exporter produits & commandes</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="document.getElementById('restore-input').click()">
+      <div class="sico" style="background:rgba(139,92,246,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7C3AED" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg></div>
+      <div class="sinfo"><div class="slabel">Restaurer une sauvegarde</div><div class="sdesc">Importer un fichier .json</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <input id="restore-input" type="file" accept=".json" style="display:none" onchange="restoreData(this.files[0])">
   </div>
   <div style="padding:var(--s3)">
     <button class="btn btn-out full" style="color:var(--err);border-color:var(--err)" onclick="if(confirm('Se déconnecter ?'))logout()">
@@ -673,7 +777,7 @@ input,textarea,select{font-family:inherit;outline:none}
       Se déconnecter
     </button>
   </div>
-  <div style="text-align:center;padding:var(--s3);font-size:11px;color:var(--t3)">WhatsApp Shop BF v1.0 · Fait avec ❤️ au Burkina Faso</div>
+  <div style="text-align:center;padding:var(--s3);font-size:11px;color:var(--t3)">WhatsApp Shop BF v2.0 Premium · Fait avec ❤️ au Burkina Faso</div>
 </div>
 
 <!-- ════════════════════════════════════
@@ -684,8 +788,60 @@ input,textarea,select{font-family:inherit;outline:none}
   <div class="ni" data-s="products" onclick="go('products')"><div class="nibox"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4m16 0v10l-8 4m0-10L4 7m8 10v-10"/></svg></div><span class="nlabel">Produits</span></div>
   <div class="ni" data-s="shop" onclick="go('shop')"><div class="nibox" style="background:rgba(37,211,102,.1);border-radius:10px"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#25D366" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span class="nlabel" style="color:#25D366">Boutique</span></div>
   <div class="ni" data-s="orders" onclick="go('orders')"><div class="nibox"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/></svg></div><span class="nlabel">Commandes</span><span class="nbadge" id="obadge">0</span></div>
+  <div class="ni" data-s="notifications" onclick="go('notifications')" style="position:relative"><div class="nibox"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg></div><span class="nbadge-notif" style="position:absolute;top:5px;right:10px;background:var(--err);color:#fff;font-size:9px;font-weight:800;min-width:16px;height:16px;border-radius:999px;display:none;align-items:center;justify-content:center;padding:0 3px">0</span><span class="nlabel">Alertes</span></div>
   <div class="ni" data-s="settings" onclick="go('settings')"><div class="nibox"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div><span class="nlabel">Réglages</span></div>
 </nav>
+
+<!-- ════ ÉCRAN HISTORIQUE VENTES ════ -->
+<div id="scr-history" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">📊 Historique</div><div class="topbar-sub">Toutes vos ventes</div></div>
+    <div class="topbar-r">
+      <button class="btn btn-ghost icon" onclick="exportHistoryWA()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></button>
+    </div>
+  </div>
+  <!-- Graphique 7 jours -->
+  <div class="section" style="padding-top:var(--s3)">
+    <div class="stitle">Ventes 7 derniers jours</div>
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s3);border:1px solid var(--bdr);box-shadow:var(--sh1)">
+      <div class="chart-bar-wrap" id="hist-chart"></div>
+      <div class="chart-labels" id="hist-labels"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="stitle">Transactions</div>
+    <div id="hist-list"></div>
+  </div>
+</div>
+
+<!-- ════ ÉCRAN CLIENTS ════ -->
+<div id="scr-clients" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">👥 Clients</div><div class="topbar-sub" id="clients-count">0 client(s)</div></div>
+  </div>
+  <div class="sbar"><div class="sin-wrap"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input class="sin" placeholder="Rechercher un client…" oninput="filterClients(this.value)"></div></div>
+  <div style="padding:var(--s3)" id="clients-list"></div>
+</div>
+
+<!-- ════ ÉCRAN CODES PROMO ════ -->
+<div id="scr-promos" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🎁 Promotions</div><div class="topbar-sub">Codes & réductions</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openAddPromo()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div class="section" style="padding-top:var(--s4)">
+    <div id="promos-list"></div>
+  </div>
+</div>
+
+<!-- ════ ÉCRAN NOTIFICATIONS ════ -->
+<div id="scr-notifications" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🔔 Notifications</div><div class="topbar-sub" id="notif-unread-count">0 non lue(s)</div></div>
+    <div class="topbar-r"><button class="btn btn-ghost icon" onclick="markAllRead()" title="Tout lire"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></button></div>
+  </div>
+  <div style="padding:var(--s3)" id="notif-list"></div>
+</div>
 
 </div><!-- /app -->
 
@@ -725,6 +881,44 @@ input,textarea,select{font-family:inherit;outline:none}
       <button id="mp-del" class="btn btn-danger" style="display:none" onclick="deleteProduct(document.getElementById('pform').dataset.id)"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></svg></button>
       <button class="btn btn-out" style="flex:1" onclick="closeModal('modal-product')">Annuler</button>
       <button class="btn btn-g" style="flex:2" onclick="saveProduct()"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/></svg>Sauvegarder</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CODE PROMO -->
+<div class="overlay" id="modal-promo" onclick="if(event.target===this)closeModal('modal-promo')">
+  <div class="modal">
+    <div class="mhandle"></div>
+    <div class="mtitle">🎁 Nouveau code promo</div>
+    <div class="field"><label>Code promo</label>
+      <div class="iw bare"><input id="promo-code" type="text" placeholder="EX: BIENVENUE20" style="padding-left:14px;text-transform:uppercase;letter-spacing:2px;font-weight:700"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)">
+      <div class="field"><label>Réduction (%)</label><div class="iw bare"><input id="promo-pct" type="number" placeholder="10" inputmode="numeric" style="padding-left:14px" min="1" max="100"></div></div>
+      <div class="field"><label>Expire dans (j)</label><div class="iw bare"><input id="promo-days" type="number" placeholder="30" inputmode="numeric" style="padding-left:14px" min="1"></div></div>
+    </div>
+    <div class="field"><label>Description</label>
+      <div class="iw bare"><input id="promo-desc" type="text" placeholder="Offre de bienvenue" style="padding-left:14px"></div>
+    </div>
+    <div class="mfooter">
+      <button class="btn btn-out" style="flex:1" onclick="closeModal('modal-promo')">Annuler</button>
+      <button class="btn btn-gold" style="flex:2" onclick="savePromo()">💾 Créer le code</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL APPLIQUER PROMO AU PANIER -->
+<div class="overlay" id="modal-apply-promo" onclick="if(event.target===this)closeModal('modal-apply-promo')">
+  <div class="modal">
+    <div class="mhandle"></div>
+    <div class="mtitle">🎟️ Code de réduction</div>
+    <div class="field"><label>Entrez votre code</label>
+      <div class="iw bare"><input id="apply-promo-input" type="text" placeholder="VOTRECODE" style="padding-left:14px;text-transform:uppercase;letter-spacing:2px;font-weight:700;font-size:18px"></div>
+    </div>
+    <div id="promo-result" style="display:none;padding:var(--s3);border-radius:var(--r12);margin-top:var(--s2);font-size:14px;font-weight:700;text-align:center"></div>
+    <div class="mfooter">
+      <button class="btn btn-out" style="flex:1" onclick="closeModal('modal-apply-promo')">Annuler</button>
+      <button class="btn btn-gold" style="flex:2" onclick="applyPromoCode()">✓ Appliquer</button>
     </div>
   </div>
 </div>
@@ -1035,7 +1229,19 @@ function go(s) {
   el.classList.add('active');
   curScreen = s;
   document.querySelectorAll('.ni').forEach(n=>n.classList.toggle('on', n.dataset.s===s));
-  const cbs = { dashboard:loadDashboard, products:()=>{ loadProducts().then(renderProducts); }, shop:loadShop, orders:loadOrders, settings:loadSettings, qrcode:()=>setTimeout(genQR,100), stats:()=>{ loadOrders().then(renderStats); } };
+  const cbs = {
+    dashboard: loadDashboard,
+    products:  ()=>{ loadProducts().then(renderProducts); },
+    shop:      loadShop,
+    orders:    loadOrders,
+    settings:  loadSettings,
+    qrcode:    ()=>setTimeout(genQR,100),
+    stats:     ()=>{ loadOrders().then(renderStats); },
+    history:       ()=>{ loadOrders().then(loadHistory); },
+    clients:       ()=>{ loadOrders().then(loadClients); },
+    promos:        loadPromos,
+    notifications: loadNotifications,
+  };
   if (cbs[s]) cbs[s]();
 }
 
@@ -1642,13 +1848,13 @@ function checkPin() {
 /* ── TABS ────────────────────────────────────────── */
 function admTab(tab) {
   document.querySelectorAll('.adm-tab').forEach((t, i) => {
-    const tabs = ['overview', 'shops', 'subs'];
+    const tabs = ['realtime', 'shops', 'subs', 'broadcast'];
     t.classList.toggle('on', tabs[i] === tab);
   });
-  const body = document.getElementById('adm-body');
-  if (tab === 'overview') renderAdmOverview();
+  if (tab === 'realtime')   renderAdmRealtime();
   else if (tab === 'shops') renderAdmShops();
-  else if (tab === 'subs') renderAdmSubs();
+  else if (tab === 'subs')  renderAdmSubs();
+  else if (tab === 'broadcast') renderAdmBroadcast();
 }
 
 /* ── DATA ────────────────────────────────────────── */
@@ -1668,7 +1874,7 @@ async function loadAdminData() {
     ...u,
     subscription: LS.g('sub_' + u.id, { plan: null, status: 'none', start: null, end: null })
   }));
-  renderAdmOverview();
+  renderAdmRealtime();
 }
 
 function saveSubscription(uid, sub) {
@@ -1686,7 +1892,7 @@ function renderAdmOverview() {
   const suspended = admUsers.filter(u => u.subscription?.status === 'suspended').length;
   const revenue = admUsers.reduce((s, u) => {
     if (u.subscription?.status !== 'active') return s;
-    const prices = { monthly: 2500, quarterly: 6750, yearly: 24000 };
+    const prices = { monthly: 3500, quarterly: 10000, yearly: 30000 };
     return s + (prices[u.subscription?.plan] || 0);
   }, 0);
 
@@ -1883,6 +2089,572 @@ function subBadgeLbl(status) {
 }
 
 if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
+
+/* ════════════════════════════════════════════════════
+   PREMIUM — 12 NOUVELLES FONCTIONNALITÉS
+════════════════════════════════════════════════════ */
+
+/* ── 1. BANNIÈRE EXPIRATION ABONNEMENT ─────────────
+   Alerte chaque commerce de la fin de son abonnement
+   (3 niveaux : 7j → warning, 3j → danger, expiré → critical) */
+function checkSubscriptionExpiry() {
+  if (!S.user) return;
+  const sub = S.user.subscription || LS.g('sub_' + S.user.id);
+  if (!sub || !sub.end || sub.status !== 'active') return;
+  const daysLeft = Math.ceil((new Date(sub.end) - new Date()) / 864e5);
+  const banner = document.getElementById('sub-expiry-banner');
+  const text   = document.getElementById('sub-expiry-text');
+  if (!banner) return;
+  if (daysLeft <= 0) {
+    banner.className = 'sub-expiry-banner critical show';
+    text.textContent = '🚫 Votre abonnement a expiré ! Contactez-nous pour renouveler.';
+  } else if (daysLeft <= 3) {
+    banner.className = 'sub-expiry-banner critical show';
+    text.textContent = `⏰ URGENT : votre abonnement expire dans ${daysLeft} jour${daysLeft>1?'s':''} !`;
+  } else if (daysLeft <= 7) {
+    banner.className = 'sub-expiry-banner show';
+    text.textContent = `⚠️ Votre abonnement expire dans ${daysLeft} jours. Renouvelez maintenant.`;
+  } else {
+    banner.classList.remove('show');
+  }
+}
+
+/* ── 2. RAPPORT WHATSAPP FIN DE JOURNÉE ──────────── */
+function sendDayReport() {
+  const today = new Date().toLocaleDateString('fr-FR');
+  const todaySales = S.orders.filter(o => {
+    const d = new Date(o.created_at);
+    const n = new Date();
+    return d.toDateString() === n.toDateString() && ['validated','delivered'].includes(o.status);
+  });
+  const total = todaySales.reduce((s,o) => s + (o.total||0), 0);
+  const topItems = {};
+  todaySales.forEach(o => (o.items||[]).forEach(i => { topItems[i.name] = (topItems[i.name]||0) + i.qty; }));
+  const topList = Object.entries(topItems).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([n,v])=>`  • ${n} : ${v} vendu(s)`).join('\n');
+  const msg = `📊 *RAPPORT DU JOUR — ${today}*\n\n🏪 ${S.shop?.name||'Ma Boutique'}\n\n💰 *Chiffre d'affaires :* ${fmt(total)}\n📦 *Commandes :* ${todaySales.length}\n\n🏆 *Top ventes :*\n${topList||'  Aucune vente'}\n\n✅ _Rapport généré automatiquement par WhatsApp Shop BF_`;
+  window.open('https://wa.me/' + (S.shop?.wa||'').replace(/\D/g,'') + '?text=' + encodeURIComponent(msg), '_blank');
+  addNotification('📊 Rapport journalier envoyé', 'Rapport du ' + today + ' partagé via WhatsApp', '📊');
+}
+
+/* ── 3. HISTORIQUE DES VENTES (graphique 7j) ─────── */
+function loadHistory() {
+  const days = 7;
+  const labels = [], values = [];
+  const now = new Date();
+  for (let i = days-1; i >= 0; i--) {
+    const d = new Date(now); d.setDate(d.getDate() - i);
+    const label = d.toLocaleDateString('fr-FR',{weekday:'short'});
+    labels.push(label);
+    const dayTotal = S.orders.filter(o => {
+      const od = new Date(o.created_at);
+      return od.toDateString() === d.toDateString() && ['validated','delivered'].includes(o.status);
+    }).reduce((s,o) => s+(o.total||0), 0);
+    values.push(dayTotal);
+  }
+  const max = Math.max(...values, 1);
+  const chartEl = document.getElementById('hist-chart');
+  const labelsEl = document.getElementById('hist-labels');
+  if (chartEl) chartEl.innerHTML = values.map((v,i) => `<div class="chart-bar" data-val="${fmt(v)}" style="height:${Math.max(4,Math.round(v/max*76))}px;opacity:${i===days-1?1:.7}"></div>`).join('');
+  if (labelsEl) labelsEl.innerHTML = labels.map(l => `<div class="chart-label">${l}</div>`).join('');
+
+  const list = document.getElementById('hist-list');
+  if (!list) return;
+  const sortedOrders = [...S.orders].sort((a,b) => new Date(b.created_at)-new Date(a.created_at));
+  if (!sortedOrders.length) { list.innerHTML = '<div class="empty"><p>Aucune transaction</p><span>Les ventes apparaîtront ici</span></div>'; return; }
+  list.innerHTML = sortedOrders.slice(0,20).map(o => `
+    <div class="sale-hist-item">
+      <div class="shi-head">
+        <div><div style="font-size:14px;font-weight:700;color:var(--t1)">${o.client_name||'Client'}</div><div class="shi-date">${fmtDate(o.created_at)}</div></div>
+        <div class="shi-total">${fmt(o.total||0)}</div>
+      </div>
+      <div style="font-size:12px;color:var(--t3)">${(o.items||[]).map(i=>i.name+' ×'+i.qty).join(' · ')||'—'}</div>
+      <div style="display:flex;gap:6px;margin-top:8px">
+        <button class="btn btn-wa sm" onclick="replyOrder('${o.id}')">💬 WA</button>
+        <button class="btn btn-ghost sm" onclick="printReceipt('${o.id}')">🖨️ Reçu</button>
+      </div>
+    </div>`).join('');
+}
+
+function exportHistoryWA() {
+  const total = S.orders.reduce((s,o)=>s+(o.total||0),0);
+  const msg = `📋 *HISTORIQUE VENTES*\n\n🏪 ${S.shop?.name}\n💰 Total général : ${fmt(total)}\n📦 ${S.orders.length} commande(s)\n\n_WhatsApp Shop BF_`;
+  window.open('https://wa.me/'+((S.shop?.wa||'').replace(/\D/g,''))+'?text='+encodeURIComponent(msg),'_blank');
+}
+
+/* ── 4. GESTION CLIENTS (CRM simplifié) ───────────── */
+function buildClientList() {
+  const map = {};
+  S.orders.forEach(o => {
+    const k = o.client_name||'Inconnu';
+    if (!map[k]) map[k] = { name:k, orders:0, total:0, last:o.created_at, phone: o.client_phone||'' };
+    map[k].orders++;
+    map[k].total += o.total||0;
+    if (new Date(o.created_at) > new Date(map[k].last)) map[k].last = o.created_at;
+  });
+  return Object.values(map).sort((a,b) => b.total - a.total);
+}
+
+function loadClients() {
+  const clients = buildClientList();
+  const count = document.getElementById('clients-count');
+  if (count) count.textContent = clients.length + ' client(s)';
+  renderClientList(clients);
+}
+
+function renderClientList(clients) {
+  const list = document.getElementById('clients-list');
+  if (!list) return;
+  if (!clients.length) { list.innerHTML='<div class="empty"><p>Aucun client</p><span>Les clients de vos commandes apparaîtront ici</span></div>'; return; }
+  list.innerHTML = clients.map((c,i) => `
+    <div class="client-card" style="margin:0 0 var(--s2)">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:var(--s3)">
+        <div class="client-avatar">${c.name[0].toUpperCase()}</div>
+        <div style="flex:1">
+          <div style="font-size:15px;font-weight:800;color:var(--t1)">${c.name}</div>
+          <div style="font-size:11px;color:var(--t3)">Client depuis ${fmtDate(c.last)}</div>
+          ${i===0?'<span style="background:rgba(201,168,76,.15);color:var(--gold);font-size:10px;font-weight:800;padding:2px 8px;border-radius:999px">⭐ TOP CLIENT</span>':''}
+        </div>
+      </div>
+      <div style="display:flex;gap:var(--s2)">
+        <div class="client-stat"><div class="client-stat-v">${c.orders}</div><div class="client-stat-l">Commandes</div></div>
+        <div style="width:1px;background:var(--bdr)"></div>
+        <div class="client-stat"><div class="client-stat-v" style="font-size:14px">${fmt(c.total)}</div><div class="client-stat-l">Total</div></div>
+        <div style="width:1px;background:var(--bdr)"></div>
+        <div class="client-stat"><div class="client-stat-v" style="font-size:14px">${fmt(c.total/c.orders)}</div><div class="client-stat-l">Panier moy.</div></div>
+      </div>
+      <div style="margin-top:var(--s3);display:flex;gap:var(--s2)">
+        <button class="btn btn-wa sm" style="flex:1" onclick="contactClient('${c.name}')">💬 Contacter</button>
+        <button class="btn btn-ghost sm" style="flex:1" onclick="clientOrders('${c.name}')">📦 Voir commandes</button>
+      </div>
+    </div>`).join('');
+}
+
+function filterClients(q2) {
+  const clients = buildClientList().filter(c => c.name.toLowerCase().includes(q2.toLowerCase()));
+  renderClientList(clients);
+}
+
+function contactClient(name) {
+  const msg = `Bonjour ${name} 👋,\n\nMerci pour votre fidélité à ${S.shop?.name||'notre boutique'} !\n\nNous avons de nouveaux produits qui pourraient vous intéresser. 🛍️`;
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
+}
+
+function clientOrders(name) {
+  const orders = S.orders.filter(o => o.client_name === name);
+  go('orders');
+  setTimeout(() => {
+    const list = document.getElementById('olist');
+    if (list) {
+      const sm={new:{cls:'s-new',lbl:'Nouvelle'},pending:{cls:'s-pending',lbl:'En attente'},validated:{cls:'s-validated',lbl:'Validée'},delivered:{cls:'s-delivered',lbl:'Livrée'}};
+      list.innerHTML = orders.map(o => {
+        const s=sm[o.status]||sm.new;
+        return `<div class="ocard" data-s="${o.status}"><div class="ohead"><div><div class="oid">#${o.id.slice(-6).toUpperCase()}</div><div class="oclient">${o.client_name}</div><div class="odate">${fmtDate(o.created_at)}</div></div><span class="sbadge ${s.cls}">${s.lbl}</span></div><div class="ototal">${fmt(o.total||0)}</div></div>`;
+      }).join('') || '<div class="empty"><p>Aucune commande</p></div>';
+    }
+  }, 100);
+}
+
+/* ── 5. CODES PROMO ──────────────────────────────── */
+let S_promos = [];
+function loadPromos() {
+  S_promos = LS.g('promos_'+S.user?.id, []);
+  renderPromos();
+}
+
+function renderPromos() {
+  const list = document.getElementById('promos-list');
+  if (!list) return;
+  if (!S_promos.length) {
+    list.innerHTML=`<div style="text-align:center;padding:var(--s6) var(--s4);color:var(--t3)">
+      <div style="font-size:48px;margin-bottom:var(--s3)">🎁</div>
+      <p style="font-size:15px;font-weight:700;color:var(--t2)">Aucun code promo</p>
+      <span style="font-size:13px">Créez des réductions pour fidéliser vos clients</span>
+    </div>`; return;
+  }
+  list.innerHTML = S_promos.map(p => {
+    const expired = p.expires && new Date(p.expires) < new Date();
+    return `<div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);margin-bottom:var(--s3);border:1px solid var(--bdr);box-shadow:var(--sh1);${expired?'opacity:.6':''}">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--s2)">
+        <div class="promo-code-box" style="width:auto;padding:8px 16px">${p.code}</div>
+        <span style="font-family:var(--fh);font-size:24px;font-weight:800;color:${expired?'var(--t3)':'var(--err)'}">${p.percent}%</span>
+      </div>
+      <div style="font-size:13px;color:var(--t2);margin-bottom:var(--s2)">${p.desc||'Réduction'}</div>
+      <div style="display:flex;align-items:center;justify-content:space-between">
+        <span style="font-size:11px;color:${expired?'var(--err)':'var(--t3)'}">${expired?'⛔ Expiré':p.expires?'⏱ Expire '+fmtDate(p.expires):'Sans limite'}</span>
+        <div style="display:flex;gap:6px">
+          <button class="btn btn-wa sm" onclick="sharePromo('${p.code}','${p.percent}')">💬</button>
+          <button class="btn btn-danger sm" onclick="deletePromo('${p.code}')">🗑️</button>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function openAddPromo() { closeModal('modal-promo'); document.getElementById('modal-promo').classList.add('open'); }
+
+function savePromo() {
+  const code = (document.getElementById('promo-code').value||'').trim().toUpperCase();
+  const percent = parseInt(document.getElementById('promo-pct').value)||0;
+  const days = parseInt(document.getElementById('promo-days').value)||0;
+  const desc = document.getElementById('promo-desc').value.trim();
+  if (!code || !percent || percent<1 || percent>100) return toast('Code et réduction requis','err');
+  if (S_promos.find(p=>p.code===code)) return toast('Ce code existe déjà','err');
+  const promo = { code, percent, desc, uses:0, created_at:new Date().toISOString(), expires: days ? new Date(Date.now()+days*864e5).toISOString() : null };
+  S_promos.push(promo);
+  LS.s('promos_'+S.user?.id, S_promos);
+  closeModal('modal-promo');
+  renderPromos();
+  addNotification('🎁 Code promo créé', `Code "${code}" — ${percent}% de réduction`, '🎁');
+  toast('Code "'+code+'" créé !','ok');
+}
+
+function deletePromo(code) {
+  S_promos = S_promos.filter(p=>p.code!==code);
+  LS.s('promos_'+S.user?.id, S_promos);
+  renderPromos(); toast('Code supprimé','inf');
+}
+
+function sharePromo(code,percent) {
+  const msg = `🎉 *OFFRE SPÉCIALE — ${S.shop?.name||'Boutique'}*\n\nUtilisez le code *${code}* pour obtenir *${percent}% de réduction* sur votre prochaine commande !\n\n⏰ Offre limitée. Ne ratez pas cette opportunité !\n\n_WhatsApp Shop BF_ 🛒`;
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
+}
+
+let activePromo = null;
+function openApplyPromo() { document.getElementById('apply-promo-input').value=''; document.getElementById('promo-result').style.display='none'; activePromo=null; document.getElementById('modal-apply-promo').classList.add('open'); }
+
+function applyPromoCode() {
+  const code = (document.getElementById('apply-promo-input').value||'').trim().toUpperCase();
+  const promo = S_promos.find(p => p.code === code && (!p.expires || new Date(p.expires) > new Date()));
+  const res = document.getElementById('promo-result');
+  if (!promo) { res.style.display='block'; res.style.background='rgba(229,57,53,.1)'; res.style.color='var(--err)'; res.textContent='❌ Code invalide ou expiré'; return; }
+  activePromo = promo;
+  res.style.display='block'; res.style.background='rgba(16,185,129,.1)'; res.style.color='var(--ok)';
+  res.textContent='✅ Code appliqué ! -' + promo.percent + '% sur le total';
+  setTimeout(() => { closeModal('modal-apply-promo'); renderCart(); toast('Code "'+code+'" appliqué !','ok'); }, 1200);
+}
+
+/* ── 6. SYSTÈME DE FIDÉLITÉ POINTS ───────────────── */
+function getLoyaltyPoints() {
+  const total = S.orders.filter(o=>['validated','delivered'].includes(o.status)).reduce((s,o)=>s+(o.total||0),0);
+  return Math.floor(total / 1000); // 1 point par 1000 FCFA
+}
+
+function renderLoyaltyWidget(containerId) {
+  const pts = getLoyaltyPoints();
+  const nextLevel = pts < 50 ? 50 : pts < 200 ? 200 : pts < 500 ? 500 : 1000;
+  const levelName = pts < 50 ? 'Bronze' : pts < 200 ? 'Argent' : pts < 500 ? 'Or' : '💎 Diamant';
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = `<div class="loyalty-card">
+    <div class="lc-title">Programme Fidélité · ${levelName}</div>
+    <div class="lc-pts">${pts}</div>
+    <div class="lc-sub">points · ${nextLevel - pts} pts pour le prochain niveau</div>
+    <div class="lc-bar"><div class="lc-fill" style="width:${Math.min(100,Math.round(pts/nextLevel*100))}%"></div></div>
+  </div>`;
+}
+
+/* ── 7. NOTIFICATIONS INTERNES ───────────────────── */
+let S_notifs = [];
+function addNotification(title, msg, icon='🔔') {
+  S_notifs.unshift({ id:Date.now().toString(), title, msg, icon, time:new Date().toISOString(), read:false });
+  S_notifs = S_notifs.slice(0,30);
+  LS.s('notifs_'+S.user?.id, S_notifs);
+  updateNotifBadge();
+}
+
+function loadNotifications() {
+  S_notifs = LS.g('notifs_'+S.user?.id, []);
+  renderNotifications();
+  updateNotifBadge();
+}
+
+function updateNotifBadge() {
+  const unread = S_notifs.filter(n=>!n.read).length;
+  document.querySelectorAll('.nbadge-notif').forEach(b => { b.textContent=unread; b.style.display=unread>0?'flex':'none'; });
+  const cnt = document.getElementById('notif-unread-count');
+  if (cnt) cnt.textContent = unread + ' non lue(s)';
+}
+
+function markAllRead() {
+  S_notifs.forEach(n=>n.read=true);
+  LS.s('notifs_'+S.user?.id, S_notifs);
+  renderNotifications(); updateNotifBadge(); toast('Tout marqué comme lu','ok');
+}
+
+function renderNotifications() {
+  const list = document.getElementById('notif-list');
+  if (!list) return;
+  if (!S_notifs.length) { list.innerHTML='<div class="empty"><p>Aucune notification</p><span>Vos alertes apparaîtront ici</span></div>'; return; }
+  list.innerHTML = S_notifs.map(n => `
+    <div class="notif-item${n.read?'':' unread'}" onclick="markNotifRead('${n.id}')">
+      <div class="notif-ico" style="background:var(--surf)">${n.icon}</div>
+      <div class="notif-body">
+        <div class="notif-title">${n.title}</div>
+        <div class="notif-msg">${n.msg}</div>
+        <div class="notif-time">${fmtDate(n.time)}</div>
+      </div>
+      ${!n.read?'<div style="width:8px;height:8px;border-radius:50%;background:var(--g2);flex-shrink:0;margin-top:4px"></div>':''}
+    </div>`).join('');
+}
+
+function markNotifRead(id) {
+  const n = S_notifs.find(x=>x.id===id);
+  if (n && !n.read) { n.read=true; LS.s('notifs_'+S.user?.id, S_notifs); renderNotifications(); updateNotifBadge(); }
+}
+
+/* ── 8. EXPORT CSV INVENTAIRE ────────────────────── */
+function exportInventoryCSV() {
+  const rows = [['Nom','Catégorie','Prix (FCFA)','Stock','Disponible','Créé le']];
+  S.products.forEach(p => rows.push([p.name||'', p.category||'', p.price||0, p.stock||0, p.available?'Oui':'Non', fmtDate(p.created_at||'')]));
+  const csv = rows.map(r => r.map(v => '"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const blob = new Blob(['\uFEFF'+csv], {type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href=url; a.download='inventaire_'+Date.now()+'.csv'; a.click();
+  URL.revokeObjectURL(url);
+  addNotification('📤 Export CSV', 'Inventaire exporté avec succès', '📤');
+  toast('Inventaire exporté !','ok');
+}
+
+/* ── 9. TICKET CAISSE PERSONNALISÉ ───────────────── */
+function buildCustomTicket(order) {
+  const sep = '─'.repeat(32);
+  const center = (s, w=32) => { const p=Math.max(0,w-s.length); return ' '.repeat(Math.floor(p/2))+s+' '.repeat(Math.ceil(p/2)); };
+  const shopName = (S.shop?.name||'MA BOUTIQUE').toUpperCase();
+  let t = center(shopName)+'\n';
+  t += center(S.shop?.address||'Ouagadougou, BF')+'\n';
+  t += center('WhatsApp: '+(S.shop?.wa||''))+'\n';
+  t += sep+'\n';
+  t += `N° : #${order.id.slice(-6).toUpperCase()}    Date: ${fmtDate(order.created_at)}\n`;
+  t += `Client : ${order.client_name||'Client'}\n`;
+  t += sep+'\n';
+  (order.items||[]).forEach(i => {
+    const line = `${i.name} x${i.qty}`;
+    const price = fmt(i.price*i.qty);
+    t += line + ' '.repeat(Math.max(1,32-line.length-price.length)) + price + '\n';
+  });
+  t += sep+'\n';
+  if (activePromo) {
+    const disc = Math.round((order.total||0)*activePromo.percent/100);
+    t += 'Sous-total : '+fmt(order.total||0)+'\n';
+    t += `Promo -${activePromo.percent}% : -${fmt(disc)}\n`;
+    t += sep+'\n';
+    t += center('TOTAL : '+fmt((order.total||0)-disc))+'\n';
+  } else {
+    t += center('TOTAL : '+fmt(order.total||0))+'\n';
+  }
+  t += sep+'\n';
+  t += center('Merci pour votre achat !')+'\n';
+  t += center('À bientôt 🙏')+'\n';
+  return t;
+}
+
+/* ── 10. ALERTE RUPTURE STOCK INTELLIGENTE ───────── */
+function checkStockAlerts() {
+  const critical = S.products.filter(p => p.stock <= 0 && p.available);
+  const low = S.products.filter(p => p.stock > 0 && p.stock <= CFG.LOW_STOCK);
+  if (critical.length) {
+    critical.forEach(p => {
+      const exists = S_notifs.find(n => n.title.includes(p.name) && !n.read);
+      if (!exists) addNotification('🚫 Rupture de stock', p.name + ' — stock épuisé !', '🚫');
+    });
+  }
+  if (low.length) {
+    low.forEach(p => {
+      const exists = S_notifs.find(n => n.title.includes(p.name) && !n.read);
+      if (!exists) addNotification('⚠️ Stock faible', p.name + ' — il reste seulement ' + p.stock + ' unité(s)', '⚠️');
+    });
+  }
+}
+
+/* ── 11. SAUVEGARDE & RESTAURATION DONNÉES ───────── */
+function backupData() {
+  const data = {
+    version: 1,
+    exported_at: new Date().toISOString(),
+    shop: S.shop,
+    products: S.products,
+    orders: S.orders,
+    promos: S_promos,
+  };
+  const json = JSON.stringify(data, null, 2);
+  const blob = new Blob([json], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href=url; a.download='backup_'+S.shop?.name?.replace(/\s/g,'_')+'_'+Date.now()+'.json'; a.click();
+  URL.revokeObjectURL(url);
+  addNotification('💾 Sauvegarde créée', 'Vos données ont été exportées avec succès', '💾');
+  toast('Sauvegarde téléchargée !','ok');
+}
+
+function restoreData(file) {
+  if (!file) return;
+  const r = new FileReader();
+  r.onload = e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (data.version !== 1) throw new Error('Format non reconnu');
+      if (data.products) { S.products = data.products; LS.s('products_cache', S.products); }
+      if (data.orders) { S.orders = data.orders; LS.s('orders_cache', S.orders); }
+      if (data.promos) { S_promos = data.promos; LS.s('promos_'+S.user?.id, S_promos); }
+      renderProducts(); renderOrders(); toast('Données restaurées avec succès !','ok');
+      addNotification('♻️ Restauration réussie', 'Données importées avec succès', '♻️');
+    } catch(err) { toast('Fichier invalide : '+err.message,'err'); }
+  };
+  r.readAsText(file);
+}
+
+/* ── 12. ADMIN STATS EN TEMPS RÉEL ───────────────── */
+function renderAdmRealtime() {
+  const body = document.getElementById('adm-body');
+  if (!body) return;
+  const now = new Date();
+  const thisMonth = admUsers.filter(u => {
+    const sub = u.subscription;
+    if (!sub?.start) return false;
+    const s = new Date(sub.start);
+    return s.getMonth()===now.getMonth() && s.getFullYear()===now.getFullYear();
+  }).length;
+  const expiring7 = admUsers.filter(u => {
+    if (!u.subscription?.end) return false;
+    const d = (new Date(u.subscription.end)-now)/864e5;
+    return d>=0 && d<=7;
+  });
+  const monthRevenue = admUsers.reduce((s,u) => {
+    if (u.subscription?.status!=='active') return s;
+    const prices = { monthly:3500, quarterly:10000, yearly:30000 };
+    return s+(prices[u.subscription?.plan]||0);
+  }, 0);
+
+  body.innerHTML = `
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:var(--s3)">
+      <div class="live-dot"></div>
+      <span style="font-size:11px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px">Temps réel · ${now.toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</span>
+    </div>
+
+    ${expiring7.length ? `<div style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s3)">
+      <div style="font-size:13px;font-weight:800;color:#fbbf24;margin-bottom:8px">⚠️ ${expiring7.length} abonnement(s) expirent dans 7 jours</div>
+      ${expiring7.map(u=>`<div style="font-size:12px;color:rgba(255,255,255,.45);padding:3px 0;display:flex;justify-content:space-between"><span>${u.shop_name||u.name}</span><button class="adm-btn adm-btn-yellow" style="padding:3px 8px;font-size:10px" onclick="admWA('${u.phone}','${u.name}')">💬 Relancer</button></div>`).join('')}
+    </div>` : ''}
+
+    <div class="adm-cards">
+      <div class="adm-card"><div class="adm-cv">${admUsers.length}</div><div class="adm-cl">Total boutiques</div></div>
+      <div class="adm-card"><div class="adm-cv" style="color:#34d399">${admUsers.filter(u=>u.subscription?.status==='active').length}</div><div class="adm-cl">Actifs</div></div>
+      <div class="adm-card"><div class="adm-cv" style="color:#60a5fa">${thisMonth}</div><div class="adm-cl">Inscrits ce mois</div></div>
+      <div class="adm-card"><div class="adm-cv" style="color:#fbbf24;font-size:14px">${fmt(monthRevenue)}</div><div class="adm-cl">Revenus du mois</div></div>
+    </div>
+
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s3)">
+      <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.6);margin-bottom:var(--s3);text-transform:uppercase;letter-spacing:.5px">Répartition plans</div>
+      ${['monthly','quarterly','yearly'].map(plan => {
+        const n = admUsers.filter(u => u.subscription?.plan === plan && u.subscription?.status === 'active').length;
+        const names = { monthly:'Mensuel (3 500 FCFA)', quarterly:'Trimestriel (10 000 FCFA)', yearly:'Annuel (30 000 FCFA)' };
+        const pct = admUsers.length > 0 ? Math.round(n/admUsers.length*100) : 0;
+        return `<div style="margin-bottom:var(--s2)">
+          <div style="display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.5);margin-bottom:4px">
+            <span>${names[plan]}</span><span>${n} boutique${n>1?'s':''}</span>
+          </div>
+          <div style="height:6px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden">
+            <div style="height:100%;width:${pct}%;background:linear-gradient(90deg,#7c3aed,#a78bfa);border-radius:999px;transition:width .5s"></div>
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+
+    <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-bottom:var(--s2)">Inscriptions récentes</div>
+    ${admUsers.slice(0,5).map(u => `
+      <div style="display:flex;align-items:center;gap:var(--s2);padding:var(--s2) 0;border-bottom:1px solid rgba(255,255,255,.06)">
+        <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#7c3aed,#4f46e5);display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:13px;font-weight:800;color:#fff;flex-shrink:0">${(u.name||'?')[0].toUpperCase()}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:13px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${u.shop_name||u.name}</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.3)">${u.phone}</div>
+        </div>
+        <span class="sub-badge ${subBadgeCls(u.subscription?.status)}">${subBadgeLbl(u.subscription?.status)}</span>
+      </div>`).join('')}
+
+    <div style="margin-top:var(--s4);display:flex;gap:var(--s2)">
+      <button class="adm-btn adm-btn-purple" style="flex:1;padding:12px" onclick="admSendBroadcast()">📢 Message groupé</button>
+      <button class="adm-btn adm-btn-green" style="flex:1;padding:12px" onclick="admExportCSV()">📤 Export CSV</button>
+    </div>
+  `;
+}
+
+/* ADMIN : message groupé WhatsApp ───────────────── */
+function admSendBroadcast() {
+  const actives = admUsers.filter(u => u.subscription?.status==='active');
+  const msg = `📢 *Message de WhatsApp Shop BF*\n\nBonjour à tous nos marchands !\n\nMerci pour votre confiance. Nous continuons d'améliorer l'application pour vous.\n\nBon business ! 💚\n\n_L'équipe WhatsApp Shop BF_`;
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
+  toast('Message ouvert pour '+actives.length+' marchands actifs','inf');
+}
+
+/* ADMIN : export CSV marchands ──────────────────── */
+function admExportCSV() {
+  const rows = [['Boutique','Nom','Téléphone','Plan','Statut','Début','Fin']];
+  admUsers.forEach(u => {
+    const sub = u.subscription||{};
+    rows.push([u.shop_name||'', u.name||'', u.phone||'', sub.plan||'Aucun', subBadgeLbl(sub.status), sub.start?fmtDate(sub.start):'', sub.end?fmtDate(sub.end):'']);
+  });
+  const csv = rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\n');
+  const blob = new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a'); a.href=url; a.download='marchands_'+Date.now()+'.csv'; a.click();
+  URL.revokeObjectURL(url);
+  toast('Export CSV téléchargé !','ok');
+}
+
+
+
+function renderAdmBroadcast() {
+  document.getElementById('adm-body').innerHTML = `
+    <div style="font-size:13px;font-weight:700;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.5px;margin-bottom:var(--s3)">Envoyer un message groupé</div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s3)">
+      <label style="font-size:11px;color:rgba(255,255,255,.4);font-weight:700;display:block;margin-bottom:6px">DESTINATAIRES</label>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:var(--s3)">
+        <button id="bc-all" style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid rgba(124,58,237,.4);background:rgba(124,58,237,.2);color:#a78bfa;cursor:pointer" onclick="selectBCTarget('all')">Tous (${admUsers.length})</button>
+        <button id="bc-active" style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:rgba(255,255,255,.4);cursor:pointer" onclick="selectBCTarget('active')">Actifs (${admUsers.filter(u=>u.subscription?.status==='active').length})</button>
+        <button id="bc-expiring" style="padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:rgba(255,255,255,.4);cursor:pointer" onclick="selectBCTarget('expiring')">Expirant bientôt</button>
+      </div>
+      <label style="font-size:11px;color:rgba(255,255,255,.4);font-weight:700;display:block;margin-bottom:6px">MESSAGE</label>
+      <textarea id="bc-msg" style="width:100%;padding:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r8);color:#fff;font-size:13px;font-family:var(--fb);resize:vertical;min-height:120px" placeholder="Tapez votre message…">📢 Bonjour depuis WhatsApp Shop BF !
+
+Merci pour votre confiance.
+
+Bonne journée ! 💚</textarea>
+      <button class="adm-btn adm-btn-green" style="width:100%;padding:12px;margin-top:var(--s2)" onclick="sendBroadcastMsg()">💬 Ouvrir WhatsApp avec ce message</button>
+    </div>`;
+}
+
+let _bcTarget = 'all';
+function selectBCTarget(t) {
+  _bcTarget = t;
+  ['all','active','expiring'].forEach(k => {
+    const btn = document.getElementById('bc-'+k);
+    if (btn) { btn.style.background = k===t?'rgba(124,58,237,.2)':'rgba(255,255,255,.05)'; btn.style.borderColor=k===t?'rgba(124,58,237,.4)':'rgba(255,255,255,.12)'; btn.style.color=k===t?'#a78bfa':'rgba(255,255,255,.4)'; }
+  });
+}
+
+function sendBroadcastMsg() {
+  const msg = document.getElementById('bc-msg')?.value || '';
+  window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
+}
+
+/* ── INIT PREMIUM au démarrage ────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  // Vérifier expiration après connexion
+  setTimeout(() => {
+    checkSubscriptionExpiry();
+    checkStockAlerts();
+  }, 3500);
+
+  // Triple-clic sur le logo de l'app (auth-icon & sp-logo)
+  let _premTapCount=0, _premTapTimer=null;
+  function handleLogoTap() {
+    _premTapCount++;
+    clearTimeout(_premTapTimer);
+    _premTapTimer = setTimeout(()=>{_premTapCount=0;}, 700);
+    if (_premTapCount>=3) { _premTapCount=0; openAdmin(); }
+  }
+  document.querySelectorAll('.sp-logo,.auth-icon,.shoplogo').forEach(el => el.addEventListener('click', handleLogoTap));
+});
+
 </script>
 
 <!-- ════════════════════════════════════
@@ -1938,10 +2710,11 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
     </div>
 
     <!-- Tabs -->
-    <div class="adm-tabs">
-      <div class="adm-tab on" onclick="admTab('overview')">Vue d'ensemble</div>
-      <div class="adm-tab" onclick="admTab('shops')">Boutiques</div>
-      <div class="adm-tab" onclick="admTab('subs')">Abonnements</div>
+    <div class="adm-tabs-scroll">
+      <div class="adm-tab on" onclick="admTab('realtime')">📡 Temps réel</div>
+      <div class="adm-tab" onclick="admTab('shops')">🏪 Boutiques</div>
+      <div class="adm-tab" onclick="admTab('subs')">💳 Abonnements</div>
+      <div class="adm-tab" onclick="admTab('broadcast')">📢 Diffusion</div>
     </div>
 
     <!-- Body -->
@@ -1956,17 +2729,17 @@ if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catc
           <div class="plan-card sel" data-plan="monthly" onclick="selectPlan(this)">
             <div class="plan-radio"></div>
             <div class="plan-info"><div class="plan-name">Mensuel</div><div class="plan-desc">Renouvellement chaque mois</div></div>
-            <div class="plan-price">2 500 FCFA</div>
+            <div class="plan-price">3 500 FCFA</div>
           </div>
           <div class="plan-card" data-plan="quarterly" onclick="selectPlan(this)">
             <div class="plan-radio"></div>
-            <div class="plan-info"><div class="plan-name">Trimestriel</div><div class="plan-desc">3 mois · Économisez 10%</div></div>
-            <div class="plan-price">6 750 FCFA</div>
+            <div class="plan-info"><div class="plan-name">Trimestriel</div><div class="plan-desc">3 mois · Meilleur rapport qualité-prix</div></div>
+            <div class="plan-price">10 000 FCFA</div>
           </div>
           <div class="plan-card" data-plan="yearly" onclick="selectPlan(this)">
             <div class="plan-radio"></div>
-            <div class="plan-info"><div class="plan-name">Annuel</div><div class="plan-desc">12 mois · Économisez 20%</div></div>
-            <div class="plan-price">24 000 FCFA</div>
+            <div class="plan-info"><div class="plan-name">Annuel</div><div class="plan-desc">12 mois · Économisez 28%</div></div>
+            <div class="plan-price">30 000 FCFA</div>
           </div>
         </div>
         <div style="display:flex;gap:var(--s2)">
