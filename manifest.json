@@ -1,15 +1,26 @@
 {
   "name": "WhatsApp Shop BF",
   "short_name": "Shop BF",
-  "description": "Boutique digitale connectée à WhatsApp",
-  "start_url": "./index.html",
+  "description": "Gérez votre boutique et vos commandes WhatsApp",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#0A1628",
-  "theme_color": "#0A1628",
+  "theme_color": "#0D6E4F",
+  "background_color": "#072d1e",
   "lang": "fr",
   "icons": [
-    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='40' fill='%230D6E4F'/><text y='130' x='50%' dominant-baseline='auto' text-anchor='middle' font-size='110' font-family='system-ui'>🛍️</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='100' fill='%230D6E4F'/><text y='360' x='50%' dominant-baseline='auto' text-anchor='middle' font-size='300' font-family='system-ui'>🛍️</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
   ]
 }
