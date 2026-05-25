@@ -315,6 +315,97 @@ input,textarea,select{font-family:inherit;outline:none}
 /* ── RESPONSIVE ──────────────────────────────────── */
 @media(max-width:360px){.pgrid,.dcards{grid-template-columns:1fr}.qagrid{grid-template-columns:repeat(3,1fr)}}
 
+/* ════════ HERO SLIDER ════════ */
+.hero-slider{position:relative;width:100%;height:200px;overflow:hidden;background:#072d1e}
+.hero-slides{display:flex;height:100%;transition:transform .5s cubic-bezier(.4,0,.2,1)}
+.hero-slide{min-width:100%;height:100%;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;background-size:cover;background-position:center}
+.hero-slide::before{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(7,45,30,.75) 0%,rgba(13,80,56,.55) 100%)}
+.hs-content{position:relative;z-index:1;text-align:center;padding:0 var(--s4)}
+.hs-tag{font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold2);margin-bottom:6px}
+.hs-title{font-family:var(--fh);font-size:22px;font-weight:800;color:#fff;line-height:1.2;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.hs-sub{font-size:12px;color:rgba(255,255,255,.7);margin-top:4px}
+.hs-btn{margin-top:12px;display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--r99);background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3d2800;font-size:12px;font-weight:800;border:none;cursor:pointer;box-shadow:var(--shg)}
+.hero-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}
+.hero-dot{width:6px;height:6px;border-radius:3px;background:rgba(255,255,255,.35);cursor:pointer;transition:all .3s}
+.hero-dot.on{width:18px;background:var(--gold2)}
+.hero-arrows{position:absolute;top:50%;transform:translateY(-50%);width:100%;display:flex;justify-content:space-between;padding:0 8px;z-index:2;pointer-events:none}
+.hero-arr{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.15);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;cursor:pointer;pointer-events:all;border:1px solid rgba(255,255,255,.2);transition:background .15s}
+.hero-arr:active{background:rgba(255,255,255,.3)}
+
+/* ════════ VARIANTES PRODUIT ════════ */
+.variant-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.vchip{padding:5px 12px;border-radius:var(--r99);border:1.5px solid var(--bdr);font-size:12px;font-weight:700;color:var(--t2);cursor:pointer;transition:all .15s;background:var(--card)}
+.vchip.on{background:var(--g1);border-color:var(--g1);color:#fff}
+.vchip.color-chip{width:28px;height:28px;padding:0;border-radius:50%;position:relative}
+.vchip.color-chip.on::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.5)}
+
+/* ════════ AVIS CLIENTS ════════ */
+.review-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);border:1px solid var(--bdr);box-shadow:var(--sh1)}
+.review-stars{display:flex;gap:2px;margin-bottom:4px}
+.star{font-size:16px;color:var(--bdr);cursor:pointer;transition:color .15s}
+.star.on,.star:hover~.star+.star{color:var(--gold)}
+.stars-row .star.on{color:var(--gold)}
+.review-author{font-size:12px;font-weight:700;color:var(--t2);margin-top:4px}
+.review-text{font-size:13px;color:var(--t1);margin-top:4px;line-height:1.5}
+.rating-avg{font-family:var(--fh);font-size:38px;font-weight:800;color:var(--t1);line-height:1}
+.rating-bar{height:6px;background:var(--surf);border-radius:var(--r99);overflow:hidden;flex:1}
+.rating-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:var(--r99);transition:width .5s ease}
+
+/* ════════ DEVIS / FACTURE ════════ */
+.invoice-preview{background:#fff;border-radius:var(--r12);padding:20px;font-size:12px;color:#111;line-height:1.6;border:1px solid var(--bdr);box-shadow:var(--sh2);max-width:320px;margin:0 auto}
+.inv-header{text-align:center;border-bottom:2px solid #0D6E4F;padding-bottom:12px;margin-bottom:12px}
+.inv-title{font-size:18px;font-weight:900;color:#0D6E4F;letter-spacing:1px}
+.inv-row{display:flex;justify-content:space-between;padding:3px 0;font-size:11px}
+.inv-row.total{border-top:2px solid #111;margin-top:6px;font-size:13px;font-weight:800}
+.inv-footer{margin-top:12px;border-top:1px dashed #ccc;padding-top:8px;text-align:center;font-size:10px;color:#888}
+
+/* ════════ TRACKING LIVRAISON ════════ */
+.track-steps{display:flex;flex-direction:column;gap:0}
+.track-step{display:flex;gap:var(--s3);padding:var(--s2) 0;position:relative}
+.track-step::before{content:'';position:absolute;left:15px;top:36px;width:2px;bottom:-8px;background:var(--bdr);z-index:0}
+.track-step:last-child::before{display:none}
+.track-dot{width:32px;height:32px;border-radius:50%;border:2px solid var(--bdr);background:var(--card);display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;transition:all .2s}
+.track-dot.done{background:var(--g2);border-color:var(--g2);color:#fff}
+.track-dot.active{background:var(--card);border-color:var(--g2);color:var(--g2);box-shadow:0 0 0 4px rgba(26,158,114,.15)}
+.track-info{padding-top:4px;flex:1}
+.track-lbl{font-size:13px;font-weight:700;color:var(--t1)}
+.track-time{font-size:11px;color:var(--t3);margin-top:2px}
+
+/* ════════ PROGRAMME FIDELITÉ ════════ */
+.pts-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:var(--r99);background:linear-gradient(135deg,var(--gold),var(--gold2));font-size:11px;font-weight:800;color:#3d2800}
+.reward-card{border:1.5px solid var(--bdr);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);display:flex;align-items:center;gap:var(--s3)}
+.reward-ico{width:40px;height:40px;border-radius:var(--r8);background:var(--gold3);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.reward-pts{font-size:13px;font-weight:800;color:var(--gold);white-space:nowrap}
+
+/* ════════ RAPPORT HEBDO ════════ */
+.report-card{background:linear-gradient(135deg,#072d1e,#0d5038);border-radius:var(--r16);padding:var(--s4);margin:var(--s3);color:#fff;position:relative;overflow:hidden}
+.report-card::before{content:'📊';position:absolute;right:var(--s3);top:var(--s3);font-size:48px;opacity:.08}
+.report-metric{text-align:center;flex:1}
+.report-val{font-family:var(--fh);font-size:22px;font-weight:800;color:#fff}
+.report-lbl{font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+
+/* ════════ CATALOGUE PUBLIC ════════ */
+.pub-hero{background:linear-gradient(160deg,#072d1e,#0d5038);padding:var(--s5) var(--s4) var(--s4);text-align:center;position:relative;overflow:hidden}
+.pub-logo-wrap{width:80px;height:80px;border-radius:var(--r16);background:linear-gradient(135deg,var(--gold),var(--gold2));display:flex;align-items:center;justify-content:center;margin:0 auto var(--s3);box-shadow:var(--shg)}
+.pub-shop-name{font-family:var(--fh);font-size:24px;font-weight:800;color:#fff}
+.pub-wa-btn{display:inline-flex;align-items:center;gap:6px;padding:10px 20px;border-radius:var(--r99);background:linear-gradient(135deg,var(--wa),var(--wa2));color:#fff;font-size:13px;font-weight:800;margin-top:var(--s3);box-shadow:var(--shw)}
+.pub-cats{display:flex;gap:var(--s2);padding:var(--s2) var(--s3);overflow-x:auto;scrollbar-width:none;background:var(--bg);border-bottom:1px solid var(--bdr)}
+.pub-cats::-webkit-scrollbar{display:none}
+
+/* ════════ MULTI-DEVISES ════════ */
+.currency-picker{display:flex;gap:6px;flex-wrap:wrap}
+.curr-btn{padding:6px 12px;border-radius:var(--r8);border:1.5px solid var(--bdr);font-size:12px;font-weight:700;color:var(--t2);background:var(--card);cursor:pointer;transition:all .15s}
+.curr-btn.on{background:var(--g1);border-color:var(--g1);color:#fff}
+
+/* ════════ TRACKING COMMANDE CLIENT ════════ */
+.order-track-wrap{background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)}
+.otrack-id{font-size:11px;font-weight:700;color:var(--t3);letter-spacing:1px}
+.otrack-status{font-family:var(--fh);font-size:18px;font-weight:800;margin-top:4px}
+
+/* ════════ SLIDER SETTINGS ════════ */
+.slide-config{background:var(--surf);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);border:1px solid var(--bdr)}
+.slide-config-num{width:24px;height:24px;border-radius:50%;background:var(--g1);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
 /* ════════ PREMIUM FEATURES CSS ════════ */
 .sub-expiry-banner{display:none;align-items:center;gap:10px;padding:10px 16px;background:linear-gradient(90deg,rgba(245,158,11,.15),rgba(239,68,68,.12));border-bottom:2px solid rgba(245,158,11,.4);font-size:12px;font-weight:700;color:#fbbf24;cursor:pointer;animation:pulseBanner 2.5s ease-in-out infinite}
 .sub-expiry-banner.show{display:flex}
@@ -374,8 +465,8 @@ input,textarea,select{font-family:inherit;outline:none}
 .adm-tabs-scroll{display:flex;background:#0d0d1a;border-bottom:1px solid rgba(255,255,255,.08);flex-shrink:0;overflow-x:auto;scrollbar-width:none}
 .adm-tabs-scroll::-webkit-scrollbar{display:none}
 
-#scr-history,#scr-clients,#scr-promos,#scr-notifications{display:none;flex-direction:column;min-height:100vh;padding-bottom:var(--bot);animation:fadeUp .25s ease}
-#scr-history.active,#scr-clients.active,#scr-promos.active,#scr-notifications.active{display:flex}
+#scr-history,#scr-clients,#scr-promos,#scr-notifications,#scr-reviews,#scr-invoice,#scr-delivery,#scr-loyalty,#scr-weekly,#scr-variants,#scr-slider-config,#scr-currency{display:none;flex-direction:column;min-height:100vh;padding-bottom:var(--bot);animation:fadeUp .25s ease}
+#scr-history.active,#scr-clients.active,#scr-promos.active,#scr-notifications.active,#scr-reviews.active,#scr-invoice.active,#scr-delivery.active,#scr-loyalty.active,#scr-weekly.active,#scr-variants.active,#scr-slider-config.active,#scr-currency.active{display:flex}
 
 /* ════════════ ADMIN PANEL ════════════ */
 #admin-overlay{position:fixed;inset:0;z-index:2000;display:none;flex-direction:column;background:#0a0f0d}
@@ -573,6 +664,9 @@ input,textarea,select{font-family:inherit;outline:none}
       <div class="qa" onclick="go('clients')"><div class="qaico" style="background:rgba(6,182,212,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><span class="qal">Clients</span></div>
       <div class="qa" onclick="go('promos')"><div class="qaico" style="background:rgba(239,68,68,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#EF4444" stroke-width="2"><path d="M7 7h.01M17 17h.01M3.5 3.5l17 17M9 3H5a2 2 0 00-2 2v4M15 3h4a2 2 0 012 2v4M3 15v4a2 2 0 002 2h4M15 21h4a2 2 0 002-2v-4"/></svg></div><span class="qal">Promos</span></div>
       <div class="qa" onclick="sendDayReport()"><div class="qaico" style="background:rgba(37,211,102,.1)"><svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></div><span class="qal">Rapport WA</span></div>
+      <div class="qa" onclick="go('reviews')"><div class="qaico" style="background:rgba(245,158,11,.1)"><span style="font-size:22px">⭐</span></div><span class="qal">Avis</span></div>
+      <div class="qa" onclick="go('delivery')"><div class="qaico" style="background:rgba(16,185,129,.1)"><span style="font-size:22px">🚚</span></div><span class="qal">Livraisons</span></div>
+      <div class="qa" onclick="go('loyalty')"><div class="qaico" style="background:rgba(201,168,76,.1)"><span style="font-size:22px">🌟</span></div><span class="qal">Fidélité</span></div>
     </div>
   </div>
   <div class="section">
@@ -598,11 +692,20 @@ input,textarea,select{font-family:inherit;outline:none}
      BOUTIQUE CLIENT
 ════════════════════════════════════ -->
 <div id="scr-shop" class="screen">
-  <div class="shopbanner">
-    <div class="shoplogo"><svg width="36" height="36" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="white" stroke-width="2"/><polyline points="9 22 9 12 15 12 15 22" stroke="white" stroke-width="2"/></svg></div>
-    <div class="shopname" id="sname">Ma Boutique</div>
-    <div class="shopadr" id="sadr"></div>
-    <div style="font-size:11px;color:rgba(255,255,255,.45)" id="shours"></div>
+  <!-- ═══ HERO SLIDER ═══ -->
+  <div class="hero-slider" id="hero-slider">
+    <div class="hero-slides" id="hero-slides">
+      <!-- Les slides sont injectées dynamiquement -->
+    </div>
+    <div class="hero-arrows">
+      <div class="hero-arr" onclick="heroSlide(-1)">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </div>
+      <div class="hero-arr" onclick="heroSlide(1)">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </div>
+    </div>
+    <div class="hero-dots" id="hero-dots"></div>
   </div>
   <div class="sbar"><div class="sin-wrap"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg><input class="sin" id="ssearch" type="search" placeholder="Rechercher un produit..." oninput="filterShop(this.value)"></div></div>
   <div class="pgrid" id="sgrid" style="padding-bottom:90px"></div>
@@ -734,6 +837,46 @@ input,textarea,select{font-family:inherit;outline:none}
       <div class="sinfo"><div class="slabel">QR Code boutique</div><div class="sdesc">Partagez votre boutique</div></div>
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
     </div>
+    <div class="srow2" onclick="go('slider-config')">
+      <div class="sico" style="background:rgba(201,168,76,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="2"><rect x="3" y="3" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <div class="sinfo"><div class="slabel">Slides de la boutique</div><div class="sdesc">Personnalisez le hero slider (4 slides)</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('reviews')">
+      <div class="sico" style="background:rgba(245,158,11,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#F59E0B" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Avis clients</div><div class="sdesc">Gérer les évaluations & notes</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('invoice')">
+      <div class="sico" style="background:rgba(33,150,243,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2196F3" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+      <div class="sinfo"><div class="slabel">Factures & Devis</div><div class="sdesc">Générer des reçus PDF</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('delivery')">
+      <div class="sico" style="background:rgba(16,185,129,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#10B981" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v4h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+      <div class="sinfo"><div class="slabel">Suivi de livraisons</div><div class="sdesc">Statut & tracking commandes</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('loyalty')">
+      <div class="sico" style="background:rgba(201,168,76,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Programme fidélité</div><div class="sdesc">Points, récompenses & niveaux</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('weekly')">
+      <div class="sico" style="background:rgba(139,92,246,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7C3AED" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+      <div class="sinfo"><div class="slabel">Rapport hebdomadaire</div><div class="sdesc">Analyse & envoi WhatsApp</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('currency')">
+      <div class="sico" style="background:rgba(6,182,212,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+      <div class="sinfo"><div class="slabel">Multi-devises</div><div class="sdesc">FCFA · EUR · USD · convertisseur</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('variants')">
+      <div class="sico" style="background:rgba(239,68,68,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#EF4444" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Variantes produits</div><div class="sdesc">Tailles, couleurs, options</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
     <div class="srow2" onclick="go('stats')">
       <div class="sico" style="background:rgba(33,150,243,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2196F3" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
       <div class="sinfo"><div class="slabel">Statistiques</div><div class="sdesc">Analysez vos ventes</div></div>
@@ -831,6 +974,99 @@ input,textarea,select{font-family:inherit;outline:none}
   </div>
   <div class="section" style="padding-top:var(--s4)">
     <div id="promos-list"></div>
+  </div>
+</div>
+
+<!-- ════ ÉCRAN AVIS CLIENTS ════ -->
+<div id="scr-reviews" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">⭐ Avis clients</div><div class="topbar-sub" id="reviews-avg">0 étoile</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openAddReview()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div style="padding:var(--s3)" id="reviews-summary"></div>
+  <div style="padding:0 var(--s3)" id="reviews-list"></div>
+</div>
+
+<!-- ════ ÉCRAN DEVIS / FACTURE ════ -->
+<div id="scr-invoice" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🧾 Factures</div><div class="topbar-sub">Devis & reçus</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openNewInvoice()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div style="padding:var(--s3)" id="invoice-list"></div>
+</div>
+
+<!-- ════ ÉCRAN SUIVI LIVRAISON ════ -->
+<div id="scr-delivery" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🚚 Livraisons</div><div class="topbar-sub">Suivi en temps réel</div></div>
+  </div>
+  <div style="padding:var(--s3)" id="delivery-list"></div>
+</div>
+
+<!-- ════ ÉCRAN PROGRAMME FIDÉLITÉ ════ -->
+<div id="scr-loyalty" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🌟 Fidélité</div><div class="topbar-sub">Points & récompenses</div></div>
+  </div>
+  <div id="loyalty-body"></div>
+</div>
+
+<!-- ════ ÉCRAN RAPPORT HEBDO ════ -->
+<div id="scr-weekly" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">📅 Rapport hebdo</div><div class="topbar-sub">Performance 7 jours</div></div>
+    <div class="topbar-r"><button class="btn btn-wa icon" onclick="sendWeeklyReport()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+    </button></div>
+  </div>
+  <div id="weekly-body"></div>
+</div>
+
+<!-- ════ ÉCRAN VARIANTES PRODUIT ════ -->
+<div id="scr-variants" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🎨 Variantes</div><div class="topbar-sub">Tailles, couleurs…</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openAddVariant()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div style="padding:var(--s3)" id="variants-body"></div>
+</div>
+
+<!-- ════ ÉCRAN CONFIG HERO SLIDER ════ -->
+<div id="scr-slider-config" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🖼️ Slides boutique</div><div class="topbar-sub">4 slides configurables</div></div>
+    <div class="topbar-r"><button class="btn btn-g sm" onclick="saveSliderConfig()">Sauvegarder</button></div>
+  </div>
+  <div style="padding:var(--s3)">
+    <div style="font-size:13px;color:var(--t2);margin-bottom:var(--s3);background:var(--surf);border-radius:var(--r8);padding:var(--s2) var(--s3)">
+      💡 Configurez chaque slide avec une image (URL), un titre et une action. Les slides s'affichent automatiquement dans la boutique client.
+    </div>
+    <div id="slides-config-list"></div>
+  </div>
+</div>
+
+<!-- ════ ÉCRAN MULTI-DEVISES ════ -->
+<div id="scr-currency" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">💱 Devises</div><div class="topbar-sub">Convertisseur de prix</div></div>
+  </div>
+  <div style="padding:var(--s3)">
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">Devise d'affichage</div>
+      <div class="currency-picker" id="currency-picker"></div>
+      <div style="margin-top:var(--s4);padding-top:var(--s4);border-top:1px solid var(--bdr)">
+        <div class="stitle">Taux de change (FCFA)</div>
+        <div id="rates-display" style="margin-top:var(--s2)"></div>
+      </div>
+    </div>
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2);margin-top:var(--s3)">
+      <div class="stitle">Convertisseur rapide</div>
+      <div class="field" style="margin-top:var(--s3)"><label>Montant en FCFA</label>
+        <div class="iw bare"><input id="conv-input" type="number" placeholder="5000" inputmode="numeric" style="padding-left:14px" oninput="convertCurrency()"></div>
+      </div>
+      <div id="conv-results" style="display:flex;flex-direction:column;gap:var(--s2);margin-top:var(--s2)"></div>
+    </div>
   </div>
 </div>
 
@@ -1241,6 +1477,14 @@ function go(s) {
     clients:       ()=>{ loadOrders().then(loadClients); },
     promos:        loadPromos,
     notifications: loadNotifications,
+    reviews:       loadReviews,
+    invoice:       loadInvoices,
+    delivery:      loadDeliveries,
+    loyalty:       loadLoyalty,
+    weekly:        loadWeeklyReport,
+    variants:      loadVariants,
+    'slider-config': loadSliderConfig,
+    currency:      loadCurrencyScreen,
   };
   if (cbs[s]) cbs[s]();
 }
@@ -1308,9 +1552,8 @@ function setChip(c) {
 ════════════════════════════════════════════════════ */
 async function loadShop() {
   await loadProducts();
-  q('#sname').textContent  = S.shop?.name || 'Ma Boutique';
-  q('#sadr').textContent   = S.shop?.address || '';
-  q('#shours').textContent = S.shop?.hours || '';
+  renderHeroSlider();
+
   const avail = S.products.filter(p=>p.available!==false&&p.stock>0);
   const g = q('#sgrid');
   if (!avail.length) { g.innerHTML=`<div class="empty" style="grid-column:1/-1"><svg width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg><p>Boutique vide</p><span>Ajoutez des produits dans votre catalogue</span></div>`; return; }
@@ -2636,8 +2879,727 @@ function sendBroadcastMsg() {
   window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank');
 }
 
-/* ── INIT PREMIUM au démarrage ────────────────────── */
+/* ════════════════════════════════════════════════════
+   HERO SLIDER — 4 slides configurables par URL
+════════════════════════════════════════════════════ */
+let _heroIdx = 0, _heroTimer = null;
+
+const DEFAULT_SLIDES = [
+  {
+    title: S.shop?.name || 'Ma Boutique',
+    sub: S.shop?.address || 'Bienvenue dans notre catalogue',
+    tag: '🛍️ Boutique',
+    btn: 'Voir les produits',
+    img: '',
+    color: 'linear-gradient(160deg,#072d1e,#0d5038)',
+    action: 'shop'
+  },
+  {
+    title: 'Nouveautés & Promos',
+    sub: 'Découvrez nos dernières offres spéciales',
+    tag: '🎁 Offres',
+    btn: 'Profiter maintenant',
+    img: '',
+    color: 'linear-gradient(160deg,#1a0d3d,#2d1b69)',
+    action: 'promos'
+  },
+  {
+    title: 'Commandez sur WhatsApp',
+    sub: 'Rapide, simple et sécurisé',
+    tag: '💬 WhatsApp',
+    btn: 'Commander',
+    img: '',
+    color: 'linear-gradient(160deg,#003d29,#006644)',
+    action: 'cart'
+  },
+  {
+    title: 'Programme Fidélité',
+    sub: 'Gagnez des points à chaque achat',
+    tag: '⭐ Fidélité',
+    btn: 'Mes points',
+    img: '',
+    color: 'linear-gradient(160deg,#3d2800,#6b4a00)',
+    action: 'loyalty'
+  }
+];
+
+function getSlides() {
+  const saved = LS.g('hero_slides', null);
+  if (saved && Array.isArray(saved) && saved.length === 4) return saved;
+  return DEFAULT_SLIDES.map((s, i) => ({
+    ...s,
+    title: i === 0 ? (S.shop?.name || s.title) : s.title,
+    sub:   i === 0 ? (S.shop?.address || s.sub) : s.sub,
+  }));
+}
+
+function renderHeroSlider() {
+  const slides = getSlides();
+  const wrap = q('#hero-slides');
+  const dots = q('#hero-dots');
+  if (!wrap) return;
+
+  wrap.innerHTML = slides.map((s, i) => `
+    <div class="hero-slide" style="background:${s.img ? 'url('+s.img+') center/cover' : s.color}">
+      <div class="hs-content">
+        <div class="hs-tag">${s.tag || ''}</div>
+        <div class="hs-title">${s.title}</div>
+        <div class="hs-sub">${s.sub}</div>
+        ${s.btn ? `<button class="hs-btn" onclick="heroAction('${s.action || 'shop'}')">${s.btn} →</button>` : ''}
+      </div>
+    </div>`).join('');
+
+  if (dots) dots.innerHTML = slides.map((_, i) => `<div class="hero-dot${i===0?' on':''}" onclick="heroGoTo(${i})"></div>`).join('');
+  _heroIdx = 0;
+  heroGoTo(0);
+  clearInterval(_heroTimer);
+  _heroTimer = setInterval(() => heroSlide(1), 4500);
+}
+
+function heroGoTo(idx) {
+  const slides = getSlides();
+  _heroIdx = (idx + slides.length) % slides.length;
+  const wrap = q('#hero-slides');
+  if (wrap) wrap.style.transform = `translateX(-${_heroIdx * 100}%)`;
+  document.querySelectorAll('.hero-dot').forEach((d, i) => d.classList.toggle('on', i === _heroIdx));
+}
+
+function heroSlide(dir) { heroGoTo(_heroIdx + dir); }
+function heroAction(action) { if (action && action !== 'shop') go(action); }
+
+/* ════════════════════════════════════════════════════
+   1. CONFIG HERO SLIDER — Écran paramétrage
+════════════════════════════════════════════════════ */
+function loadSliderConfig() {
+  const slides = getSlides();
+  const el = q('#slides-config-list');
+  if (!el) return;
+  el.innerHTML = slides.map((s, i) => `
+    <div class="slide-config">
+      <div style="display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s3)">
+        <div class="slide-config-num">${i+1}</div>
+        <div style="font-size:14px;font-weight:700;color:var(--t1)">Slide ${i+1}</div>
+        ${s.img ? `<img src="${s.img}" style="width:40px;height:28px;object-fit:cover;border-radius:4px;margin-left:auto">` : ''}
+      </div>
+      <div class="field"><label>Titre</label>
+        <div class="iw bare"><input id="sl-title-${i}" type="text" value="${s.title||''}" placeholder="Titre de la slide" style="padding-left:14px"></div>
+      </div>
+      <div class="field"><label>Sous-titre</label>
+        <div class="iw bare"><input id="sl-sub-${i}" type="text" value="${s.sub||''}" placeholder="Description courte" style="padding-left:14px"></div>
+      </div>
+      <div class="field"><label>Tag / Emoji</label>
+        <div class="iw bare"><input id="sl-tag-${i}" type="text" value="${s.tag||''}" placeholder="🛍️ Nouveautés" style="padding-left:14px"></div>
+      </div>
+      <div class="field"><label>URL Image (optionnel)</label>
+        <div class="iw bare"><input id="sl-img-${i}" type="url" value="${s.img||''}" placeholder="https://…/image.jpg" style="padding-left:14px"></div>
+      </div>
+      <div class="field"><label>Texte du bouton</label>
+        <div class="iw bare"><input id="sl-btn-${i}" type="text" value="${s.btn||''}" placeholder="Voir les produits" style="padding-left:14px"></div>
+      </div>
+      <div class="field"><label>Action au clic</label>
+        <div class="iw bare">
+          <select id="sl-action-${i}" style="padding-left:14px">
+            <option value="shop" ${s.action==='shop'?'selected':''}>Boutique</option>
+            <option value="promos" ${s.action==='promos'?'selected':''}>Promotions</option>
+            <option value="cart" ${s.action==='cart'?'selected':''}>Panier</option>
+            <option value="loyalty" ${s.action==='loyalty'?'selected':''}>Fidélité</option>
+            <option value="clients" ${s.action==='clients'?'selected':''}>Clients</option>
+          </select>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function saveSliderConfig() {
+  const slides = getSlides();
+  const saved = slides.map((s, i) => ({
+    ...s,
+    title:  document.getElementById('sl-title-'+i)?.value || s.title,
+    sub:    document.getElementById('sl-sub-'+i)?.value || s.sub,
+    tag:    document.getElementById('sl-tag-'+i)?.value || s.tag,
+    img:    document.getElementById('sl-img-'+i)?.value || s.img,
+    btn:    document.getElementById('sl-btn-'+i)?.value || s.btn,
+    action: document.getElementById('sl-action-'+i)?.value || s.action,
+  }));
+  LS.s('hero_slides', saved);
+  toast('Slides sauvegardées ✓', 'ok');
+  go('shop');
+}
+
+/* ════════════════════════════════════════════════════
+   2. AVIS CLIENTS — Système de notation
+════════════════════════════════════════════════════ */
+function loadReviews() {
+  const reviews = LS.g('shop_reviews', []);
+  const el = q('#reviews-list');
+  const summary = q('#reviews-summary');
+  const avg = q('#reviews-avg');
+
+  const total = reviews.length;
+  const mean = total ? reviews.reduce((s, r) => s + (r.stars || 0), 0) / total : 0;
+  if (avg) avg.textContent = total ? `${mean.toFixed(1)} ★ · ${total} avis` : 'Aucun avis';
+
+  // Summary bar
+  if (summary) {
+    const counts = [5,4,3,2,1].map(n => ({n, c: reviews.filter(r=>r.stars===n).length}));
+    summary.innerHTML = `
+      <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2);margin-bottom:var(--s3)">
+        <div style="display:flex;gap:var(--s3);align-items:center;margin-bottom:var(--s3)">
+          <div style="text-align:center">
+            <div class="rating-avg">${mean.toFixed(1)}</div>
+            <div style="color:var(--gold);font-size:18px;margin-top:2px">${'★'.repeat(Math.round(mean))}${'☆'.repeat(5-Math.round(mean))}</div>
+            <div style="font-size:11px;color:var(--t3);margin-top:2px">${total} avis</div>
+          </div>
+          <div style="flex:1">
+            ${counts.map(({n,c}) => `
+              <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
+                <span style="font-size:11px;font-weight:700;width:12px;text-align:right;color:var(--t2)">${n}</span>
+                <span style="font-size:11px;color:var(--gold)">★</span>
+                <div class="rating-bar"><div class="rating-fill" style="width:${total?c/total*100:0}%"></div></div>
+                <span style="font-size:10px;color:var(--t3);width:16px">${c}</span>
+              </div>`).join('')}
+          </div>
+        </div>
+      </div>`;
+  }
+
+  if (!el) return;
+  if (!reviews.length) { el.innerHTML = '<div class="empty"><p>Aucun avis</p><span>Les avis de vos clients apparaîtront ici</span></div>'; return; }
+  el.innerHTML = reviews.slice().reverse().map(r => `
+    <div class="review-card">
+      <div class="stars-row">${'★'.repeat(r.stars||0).split('').map(s=>`<span class="star on">${s}</span>`).join('')}${'☆'.repeat(5-(r.stars||0)).split('').map(s=>`<span class="star">${s}</span>`).join('')}</div>
+      <div class="review-text">${r.text || ''}</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">
+        <div class="review-author">— ${r.author || 'Client anonyme'}</div>
+        <div style="font-size:10px;color:var(--t3)">${r.date || ''}</div>
+      </div>
+    </div>`).join('');
+}
+
+let _pendingStars = 0;
+function openAddReview() {
+  _pendingStars = 5;
+  const html = `
+    <div style="text-align:center;margin-bottom:var(--s3)">
+      <div style="font-size:13px;color:var(--t2);margin-bottom:var(--s2)">Note</div>
+      <div id="star-picker" style="display:flex;gap:4px;justify-content:center;font-size:32px">
+        ${[1,2,3,4,5].map(n => `<span onclick="pickStar(${n})" style="cursor:pointer;color:${n<=5?'var(--gold)':'var(--bdr)'};transition:transform .1s" id="sp${n}">★</span>`).join('')}
+      </div>
+    </div>
+    <div class="field"><label>Votre prénom</label><div class="iw bare"><input id="rv-author" type="text" placeholder="Fatou" style="padding-left:14px"></div></div>
+    <div class="field"><label>Commentaire</label><div class="iw bare"><textarea id="rv-text" placeholder="Très bonne boutique…" style="padding-left:14px;min-height:80px"></textarea></div></div>`;
+
+  // Réutiliser un overlay simple
+  const ov = document.createElement('div');
+  ov.className = 'overlay open'; ov.id = 'review-overlay';
+  ov.innerHTML = `<div class="modal"><div class="mhandle"></div><div class="mtitle">⭐ Ajouter un avis</div>${html}<div class="mfooter"><button class="btn btn-out" style="flex:1" onclick="document.getElementById('review-overlay').remove()">Annuler</button><button class="btn btn-gold" style="flex:2" onclick="saveReview()">Publier</button></div></div>`;
+  ov.addEventListener('click', e => { if (e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+  pickStar(5);
+}
+
+function pickStar(n) {
+  _pendingStars = n;
+  [1,2,3,4,5].forEach(i => {
+    const s = document.getElementById('sp'+i);
+    if (s) s.style.color = i<=n ? 'var(--gold)' : 'rgba(0,0,0,.15)';
+  });
+}
+
+function saveReview() {
+  const reviews = LS.g('shop_reviews', []);
+  reviews.push({
+    stars: _pendingStars,
+    author: document.getElementById('rv-author')?.value || 'Anonyme',
+    text:   document.getElementById('rv-text')?.value || '',
+    date:   new Date().toLocaleDateString('fr-FR', {day:'2-digit',month:'short',year:'numeric'})
+  });
+  LS.s('shop_reviews', reviews);
+  document.getElementById('review-overlay')?.remove();
+  toast('Avis publié ✓', 'ok');
+  loadReviews();
+}
+
+/* ════════════════════════════════════════════════════
+   3. FACTURES & DEVIS — Génération PDF/print
+════════════════════════════════════════════════════ */
+function loadInvoices() {
+  const invoices = LS.g('invoices', []);
+  const el = q('#invoice-list');
+  if (!el) return;
+  if (!invoices.length) {
+    el.innerHTML = `<div class="empty"><svg width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg><p>Aucune facture</p><span>Créez votre première facture</span></div>
+    <div style="margin-top:var(--s3)"><button class="btn btn-g full" onclick="openNewInvoice()">+ Nouvelle facture</button></div>`;
+    return;
+  }
+  el.innerHTML = invoices.slice().reverse().map(inv => `
+    <div class="ocard" data-s="validated" style="cursor:pointer" onclick="printInvoice('${inv.id}')">
+      <div class="ohead">
+        <div>
+          <div class="oid">#${inv.number || inv.id}</div>
+          <div class="oclient">${inv.client || 'Client'}</div>
+          <div class="odate">${inv.date || ''}</div>
+        </div>
+        <div>
+          <div class="ototal">${fmt(inv.total || 0)}</div>
+          <div style="font-size:11px;text-align:right;color:var(--t3);margin-top:2px">${inv.type==='devis'?'Devis':'Facture'}</div>
+        </div>
+      </div>
+      <div class="oactions">
+        <button class="btn btn-out sm" onclick="event.stopPropagation();printInvoice('${inv.id}')">🖨️ Imprimer</button>
+        <button class="btn btn-wa sm" onclick="event.stopPropagation();shareInvoiceWA('${inv.id}')">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          WA
+        </button>
+      </div>
+    </div>`).join('');
+}
+
+function openNewInvoice() {
+  // Pré-remplir avec le panier ou créer vide
+  const items = S.cart.length ? S.cart : [];
+  const total = items.reduce((s,i) => s+i.price*i.qty, 0);
+  const inv = {
+    id: Date.now().toString(),
+    number: 'INV-' + new Date().getFullYear() + '-' + String(LS.g('invoices',[]).length+1).padStart(3,'0'),
+    date: new Date().toLocaleDateString('fr-FR'),
+    client: '',
+    items,
+    total,
+    type: 'facture',
+    shop: S.shop?.name || 'Boutique',
+    wa: S.shop?.wa || '',
+    address: S.shop?.address || ''
+  };
+
+  const ov = document.createElement('div');
+  ov.className = 'overlay open'; ov.id = 'invoice-overlay';
+  ov.innerHTML = `<div class="modal" style="max-height:95vh">
+    <div class="mhandle"></div>
+    <div class="mtitle">🧾 Nouvelle facture</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)">
+      <div class="field"><label>Type</label><div class="iw bare"><select id="inv-type" style="padding-left:14px"><option value="facture">Facture</option><option value="devis">Devis</option></select></div></div>
+      <div class="field"><label>N°</label><div class="iw bare"><input id="inv-num" type="text" value="${inv.number}" style="padding-left:14px"></div></div>
+    </div>
+    <div class="field"><label>Client</label><div class="iw bare"><input id="inv-client" type="text" placeholder="Nom du client" style="padding-left:14px"></div></div>
+    <div style="background:var(--surf);border-radius:var(--r8);padding:var(--s2);margin-bottom:var(--s3)">
+      ${items.length ? items.map(i=>`<div class="srow" style="font-size:13px"><span>${i.name} x${i.qty}</span><span style="font-weight:700">${fmt(i.price*i.qty)}</span></div>`).join('')+'<div class="srow total"><span>TOTAL</span><span>${fmt(total)}</span></div>' : '<div style="color:var(--t3);font-size:13px;text-align:center;padding:var(--s2)">Panier vide – ajoutez des produits</div>'}
+    </div>
+    <div class="mfooter">
+      <button class="btn btn-out" style="flex:1" onclick="document.getElementById('invoice-overlay').remove()">Annuler</button>
+      <button class="btn btn-g" style="flex:2" onclick="saveInvoice(${JSON.stringify(inv).replace(/"/g,'&quot;')})">💾 Sauvegarder</button>
+    </div>
+  </div>`;
+  ov.addEventListener('click', e => { if (e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+}
+
+function saveInvoice(inv) {
+  inv.client = document.getElementById('inv-client')?.value || 'Client';
+  inv.type   = document.getElementById('inv-type')?.value || 'facture';
+  inv.number = document.getElementById('inv-num')?.value || inv.number;
+  const invoices = LS.g('invoices', []);
+  invoices.push(inv);
+  LS.s('invoices', invoices);
+  document.getElementById('invoice-overlay')?.remove();
+  toast('Facture créée ✓', 'ok');
+  loadInvoices();
+}
+
+function printInvoice(id) {
+  const inv = LS.g('invoices',[]).find(i=>i.id===id);
+  if (!inv) return;
+  const w = window.open('', '_blank');
+  w.document.write(`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>${inv.number}</title>
+  <style>body{font-family:'Courier New',monospace;max-width:320px;margin:20px auto;font-size:12px;color:#111;line-height:1.6}
+  h1{font-size:18px;font-weight:900;color:#0D6E4F;text-align:center;border-bottom:2px solid #0D6E4F;padding-bottom:8px}
+  .row{display:flex;justify-content:space-between;padding:2px 0}
+  .total{border-top:2px solid #111;margin-top:6px;font-weight:800;font-size:14px}
+  .footer{border-top:1px dashed #ccc;margin-top:12px;padding-top:8px;text-align:center;font-size:10px;color:#888}
+  @media print{body{margin:0}}</style></head><body>
+  <h1>${inv.type==='devis'?'DEVIS':'FACTURE'}</h1>
+  <div class="row"><span>${inv.shop||'Boutique'}</span><span>${inv.number}</span></div>
+  <div class="row"><span>Date :</span><span>${inv.date}</span></div>
+  <div class="row"><span>Client :</span><span>${inv.client}</span></div>
+  <br>
+  ${(inv.items||[]).map(i=>`<div class="row"><span>${i.name} x${i.qty}</span><span>${Number(i.price*i.qty).toLocaleString('fr-FR')} FCFA</span></div>`).join('')}
+  <div class="row total"><span>TOTAL</span><span>${Number(inv.total).toLocaleString('fr-FR')} FCFA</span></div>
+  <div class="footer">Merci de votre confiance · ${inv.shop} · ${inv.wa||''}</div>
+  </body></html>`);
+  w.document.close();
+  setTimeout(() => w.print(), 400);
+}
+
+function shareInvoiceWA(id) {
+  const inv = LS.g('invoices',[]).find(i=>i.id===id);
+  if (!inv) return;
+  const lines = (inv.items||[]).map(i=>`▪️ ${i.name} x${i.qty} → ${Number(i.price*i.qty).toLocaleString('fr-FR')} FCFA`).join('\n');
+  const msg = `🧾 *${inv.type==='devis'?'DEVIS':'FACTURE'} ${inv.number}*\n\n📅 Date : ${inv.date}\n👤 Client : ${inv.client}\n\n${lines}\n\n━━━━━━━━━\n*TOTAL : ${Number(inv.total).toLocaleString('fr-FR')} FCFA*\n\n_${inv.shop}_`;
+  const wa = (inv.wa||'').replace(/\D/g,'');
+  window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+/* ════════════════════════════════════════════════════
+   4. SUIVI LIVRAISON — Tracking commandes
+════════════════════════════════════════════════════ */
+const DELIVERY_STEPS = [
+  { key:'received',  icon:'📋', label:'Commande reçue' },
+  { key:'confirmed', icon:'✅', label:'Confirmée' },
+  { key:'preparing', icon:'📦', label:'En préparation' },
+  { key:'shipped',   icon:'🚚', label:'En livraison' },
+  { key:'delivered', icon:'🎉', label:'Livrée' },
+];
+
+function loadDeliveries() {
+  const el = q('#delivery-list');
+  if (!el) return;
+  const orders = S.orders.filter(o => o.status !== 'cancelled');
+  if (!orders.length) { el.innerHTML = '<div class="empty"><p>Aucune livraison</p><span>Vos commandes actives apparaîtront ici</span></div>'; return; }
+  el.innerHTML = orders.map(o => {
+    const prog = LS.g('delivery_'+o.id, { step: o.status==='validated'?'confirmed':o.status==='delivered'?'delivered':'received', times:{} });
+    const curIdx = DELIVERY_STEPS.findIndex(s=>s.key===prog.step);
+    return `
+    <div class="order-track-wrap" style="margin-bottom:var(--s3)">
+      <div class="otrack-id">COMMANDE #${o.id?.slice(-6)||'------'}</div>
+      <div class="otrack-status" style="color:var(--g2)">${DELIVERY_STEPS[Math.max(0,curIdx)].label}</div>
+      <div style="font-size:12px;color:var(--t2);margin-bottom:var(--s3)">${o.client_name}</div>
+      <div class="track-steps">
+        ${DELIVERY_STEPS.map((s, i) => {
+          const done = i < curIdx;
+          const active = i === curIdx;
+          return `<div class="track-step">
+            <div class="track-dot ${done?'done':active?'active':''}">
+              ${done?'<svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>':s.icon}
+            </div>
+            <div class="track-info">
+              <div class="track-lbl" style="color:${done||active?'var(--t1)':'var(--t3)'}">${s.label}</div>
+              ${prog.times[s.key]?`<div class="track-time">${new Date(prog.times[s.key]).toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'})}</div>`:''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div style="display:flex;gap:var(--s2);margin-top:var(--s3);flex-wrap:wrap">
+        ${DELIVERY_STEPS.map((s,i) => i > curIdx ? `<button class="btn btn-out sm" onclick="advanceDelivery('${o.id}','${s.key}')">→ ${s.label}</button>` : '').join('')}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function advanceDelivery(orderId, step) {
+  const prog = LS.g('delivery_'+orderId, { step:'received', times:{} });
+  prog.step = step;
+  prog.times[step] = new Date().toISOString();
+  LS.s('delivery_'+orderId, prog);
+  // Notifier via WA
+  const o = S.orders.find(x=>x.id===orderId);
+  if (o && S.shop?.wa) {
+    const stepLabel = DELIVERY_STEPS.find(s=>s.key===step)?.label || step;
+    const msg = `🚚 *Mise à jour commande*\n\nBonjour ${o.client_name},\n\nVotre commande est maintenant : *${stepLabel}*\n\n_${S.shop?.name}_`;
+    window.open(`https://wa.me/${(S.shop.wa).replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`, '_blank');
+  }
+  toast('Statut mis à jour ✓', 'ok');
+  loadDeliveries();
+}
+
+/* ════════════════════════════════════════════════════
+   5. PROGRAMME FIDÉLITÉ — Points & récompenses
+════════════════════════════════════════════════════ */
+const LOYALTY_REWARDS = [
+  { pts:500,  label:'5% de réduction', icon:'🎫' },
+  { pts:1000, label:'Livraison offerte', icon:'🚚' },
+  { pts:2000, label:'10% de réduction', icon:'💎' },
+  { pts:5000, label:'Produit gratuit', icon:'🎁' },
+];
+
+function getLoyaltyPoints() { return LS.g('loyalty_points', 0); }
+function addLoyaltyPoints(amount) {
+  const pts = getLoyaltyPoints() + Math.floor(amount / 1000); // 1 pt par 1000 FCFA
+  LS.s('loyalty_points', pts);
+  return pts;
+}
+
+function loadLoyalty() {
+  const pts = getLoyaltyPoints();
+  const orders = S.orders;
+  const totalSpent = orders.reduce((s,o)=>s+(o.total||0),0);
+  const nextReward = LOYALTY_REWARDS.find(r=>r.pts > pts);
+  const el = q('#loyalty-body');
+  if (!el) return;
+  el.innerHTML = `
+    <div class="loyalty-card">
+      <div class="lc-title">Points accumulés</div>
+      <div class="lc-pts">${pts}</div>
+      <div class="lc-sub">${nextReward ? `Encore ${nextReward.pts - pts} pts pour : ${nextReward.icon} ${nextReward.label}` : '🏆 Tous les paliers atteints !'}</div>
+      ${nextReward ? `<div class="lc-bar"><div class="lc-fill" style="width:${Math.min(pts/nextReward.pts*100,100)}%"></div></div>` : ''}
+    </div>
+    <div style="padding:0 var(--s4)">
+      <div class="stitle" style="margin-bottom:var(--s3)">Vos récompenses</div>
+      ${LOYALTY_REWARDS.map(r => `
+        <div class="reward-card">
+          <div class="reward-ico">${r.icon}</div>
+          <div style="flex:1">
+            <div style="font-size:14px;font-weight:700;color:var(--t1)">${r.label}</div>
+            <div class="reward-pts">⭐ ${r.pts} points</div>
+          </div>
+          ${pts >= r.pts ? `<button class="btn btn-gold sm" onclick="redeemReward('${r.label}')">Utiliser</button>` : `<div style="font-size:11px;color:var(--t3)">${r.pts - pts} pts</div>`}
+        </div>`).join('')}
+      <div style="margin-top:var(--s4);padding-top:var(--s4);border-top:1px solid var(--bdr)">
+        <div style="font-size:13px;color:var(--t2);margin-bottom:var(--s2)">💡 Comment gagner des points</div>
+        <div style="font-size:12px;color:var(--t3);line-height:1.7">
+          • 1 point par tranche de 1 000 FCFA achetée<br>
+          • Total dépensé : <strong style="color:var(--t1)">${fmt(totalSpent)}</strong><br>
+          • Points estimés : <strong style="color:var(--g2)">${Math.floor(totalSpent/1000)} pts</strong>
+        </div>
+      </div>
+    </div>`;
+}
+
+function redeemReward(label) {
+  const wa = (S.shop?.wa||'').replace(/\D/g,'');
+  const msg = `🌟 *Récompense fidélité*\n\nBonjour,\nJe souhaite utiliser ma récompense : *${label}*\n\nMerci !`;
+  if (wa) window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, '_blank');
+  else toast('Configurez votre numéro WhatsApp dans les paramètres', 'inf');
+}
+
+/* ════════════════════════════════════════════════════
+   6. RAPPORT HEBDOMADAIRE — Analyse 7 jours
+════════════════════════════════════════════════════ */
+function loadWeeklyReport() {
+  const el = q('#weekly-body');
+  if (!el) return;
+  const now = new Date();
+  const weekAgo = new Date(now - 7*24*3600*1000);
+  const weekOrders = S.orders.filter(o => new Date(o.created_at) >= weekAgo);
+  const revenue = weekOrders.reduce((s,o)=>s+(o.total||0),0);
+  const avg = weekOrders.length ? revenue/weekOrders.length : 0;
+  const validated = weekOrders.filter(o=>['validated','delivered'].includes(o.status)).length;
+  // Top produit
+  const freq = {};
+  weekOrders.forEach(o=>(o.items||[]).forEach(i=>{freq[i.name]=(freq[i.name]||0)+i.qty;}));
+  const topProd = Object.entries(freq).sort((a,b)=>b[1]-a[1])[0];
+  // Par jour
+  const days = [0,1,2,3,4,5,6].map(d => {
+    const date = new Date(now - d*24*3600*1000);
+    const dOrders = weekOrders.filter(o=>new Date(o.created_at).toDateString()===date.toDateString());
+    return { label: date.toLocaleDateString('fr-FR',{weekday:'short'}), val: dOrders.reduce((s,o)=>s+(o.total||0),0) };
+  }).reverse();
+  const maxVal = Math.max(...days.map(d=>d.val), 1);
+
+  el.innerHTML = `
+    <div class="report-card">
+      <div style="font-size:12px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.8px;margin-bottom:var(--s3)">Semaine du ${weekAgo.toLocaleDateString('fr-FR',{day:'2-digit',month:'short'})} au ${now.toLocaleDateString('fr-FR',{day:'2-digit',month:'short'})}</div>
+      <div style="display:flex;justify-content:space-around">
+        <div class="report-metric"><div class="report-val">${fmt(revenue)}</div><div class="report-lbl">Chiffre affaires</div></div>
+        <div class="report-metric"><div class="report-val">${weekOrders.length}</div><div class="report-lbl">Commandes</div></div>
+        <div class="report-metric"><div class="report-val">${validated}</div><div class="report-lbl">Validées</div></div>
+      </div>
+    </div>
+    <div style="padding:0 var(--s3) var(--s3)">
+      <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2);margin-bottom:var(--s3)">
+        <div class="stitle" style="margin-bottom:var(--s3)">Ventes par jour</div>
+        <div class="chart-bar-wrap" style="height:90px">
+          ${days.map(d=>`<div class="chart-bar" style="height:${Math.max(d.val/maxVal*100,4)}%" data-val="${Number(d.val).toLocaleString('fr-FR')}"></div>`).join('')}
+        </div>
+        <div class="chart-labels">${days.map(d=>`<div class="chart-label">${d.label}</div>`).join('')}</div>
+      </div>
+      <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+        <div class="srow"><span class="slbl">Panier moyen</span><span class="sval">${fmt(avg)}</span></div>
+        ${topProd?`<div class="srow"><span class="slbl">Top produit</span><span class="sval">${topProd[0]} (×${topProd[1]})</span></div>`:''}
+        <div class="srow"><span class="slbl">Taux validation</span><span class="sval">${weekOrders.length?Math.round(validated/weekOrders.length*100):0}%</span></div>
+      </div>
+      <button class="btn btn-wa full" style="margin-top:var(--s3)" onclick="sendWeeklyReport()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+        Envoyer le rapport WA
+      </button>
+    </div>`;
+}
+
+function sendWeeklyReport() {
+  const now = new Date();
+  const weekAgo = new Date(now - 7*24*3600*1000);
+  const weekOrders = S.orders.filter(o => new Date(o.created_at) >= weekAgo);
+  const revenue = weekOrders.reduce((s,o)=>s+(o.total||0),0);
+  const validated = weekOrders.filter(o=>['validated','delivered'].includes(o.status)).length;
+  const freq = {};
+  weekOrders.forEach(o=>(o.items||[]).forEach(i=>{freq[i.name]=(freq[i.name]||0)+i.qty;}));
+  const top = Object.entries(freq).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([n,v])=>`   ▪️ ${n} : ${v} vendus`).join('\n');
+  const msg = `📅 *Rapport hebdomadaire — ${S.shop?.name||'Boutique'}*\n📆 ${weekAgo.toLocaleDateString('fr-FR',{day:'2-digit',month:'short'})} → ${now.toLocaleDateString('fr-FR',{day:'2-digit',month:'short'})}\n\n💰 CA : *${Number(revenue).toLocaleString('fr-FR')} FCFA*\n📋 Commandes : *${weekOrders.length}*\n✅ Validées : *${validated}*\n\n🏆 Top produits :\n${top||'   Aucun'}\n\n_Rapport auto · WhatsApp Shop BF_`;
+  const wa = (S.shop?.wa||'').replace(/\D/g,'');
+  window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+/* ════════════════════════════════════════════════════
+   7. VARIANTES PRODUITS — Taille, couleur, option
+════════════════════════════════════════════════════ */
+function loadVariants() {
+  const variants = LS.g('product_variants', {});
+  const el = q('#variants-body');
+  if (!el) return;
+  const products = S.products;
+  if (!products.length) { el.innerHTML = '<div class="empty"><p>Aucun produit</p><span>Ajoutez d\'abord des produits</span></div>'; return; }
+  el.innerHTML = products.map(p => {
+    const pvs = variants[p.id] || { sizes:[], colors:[], options:[] };
+    return `
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh1);margin-bottom:var(--s3)">
+      <div style="font-size:15px;font-weight:800;color:var(--t1);margin-bottom:var(--s3)">${p.name}</div>
+      <div class="field"><label>Tailles (séparées par ',')</label>
+        <div class="iw bare"><input id="vs-${p.id}-sizes" type="text" value="${pvs.sizes.join(',')}" placeholder="S, M, L, XL, XXL" style="padding-left:14px"></div>
+      </div>
+      <div class="field"><label>Couleurs (noms séparés par ',')</label>
+        <div class="iw bare"><input id="vs-${p.id}-colors" type="text" value="${pvs.colors.join(',')}" placeholder="Rouge, Vert, Bleu" style="padding-left:14px"></div>
+      </div>
+      <div class="field"><label>Autres options</label>
+        <div class="iw bare"><input id="vs-${p.id}-opts" type="text" value="${pvs.options.join(',')}" placeholder="Parfumé, Sans sucre…" style="padding-left:14px"></div>
+      </div>
+      <div style="display:flex;gap:var(--s2)">
+        ${pvs.sizes.length?`<div style="flex:1"><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Tailles</div><div class="variant-wrap">${pvs.sizes.map(s=>`<div class="vchip">${s}</div>`).join('')}</div></div>`:''}
+        ${pvs.colors.length?`<div style="flex:1"><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px">Couleurs</div><div class="variant-wrap">${pvs.colors.map(c=>`<div class="vchip">${c}</div>`).join('')}</div></div>`:''}
+      </div>
+      <button class="btn btn-g sm" style="margin-top:var(--s2)" onclick="saveVariant('${p.id}')">Sauvegarder les variantes</button>
+    </div>`;
+  }).join('');
+}
+
+function saveVariant(pid) {
+  const variants = LS.g('product_variants', {});
+  const parse = id => (document.getElementById(id)?.value||'').split(',').map(s=>s.trim()).filter(Boolean);
+  variants[pid] = { sizes: parse(`vs-${pid}-sizes`), colors: parse(`vs-${pid}-colors`), options: parse(`vs-${pid}-opts`) };
+  LS.s('product_variants', variants);
+  toast('Variantes sauvegardées ✓', 'ok');
+  loadVariants();
+}
+
+function openAddVariant() { toast('Sélectionnez un produit ci-dessous pour configurer ses variantes', 'inf'); }
+
+/* ════════════════════════════════════════════════════
+   8. MULTI-DEVISES — Convertisseur FCFA
+════════════════════════════════════════════════════ */
+const CURRENCIES = {
+  FCFA: { rate:1,      symbol:'FCFA', flag:'🇧🇫' },
+  EUR:  { rate:655.96, symbol:'€',    flag:'🇪🇺' },
+  USD:  { rate:600.00, symbol:'$',    flag:'🇺🇸' },
+  GHS:  { rate:42.00,  symbol:'₵',    flag:'🇬🇭' },
+  XOF:  { rate:1,      symbol:'XOF',  flag:'🌍' },
+};
+
+function loadCurrencyScreen() {
+  const curr = LS.g('active_currency', 'FCFA');
+  const picker = q('#currency-picker');
+  const rates = q('#rates-display');
+  if (picker) {
+    picker.innerHTML = Object.entries(CURRENCIES).map(([k,v]) =>
+      `<div class="curr-btn${k===curr?' on':''}" onclick="setCurrency('${k}')">${v.flag} ${k}</div>`).join('');
+  }
+  if (rates) {
+    rates.innerHTML = Object.entries(CURRENCIES).filter(([k])=>k!=='FCFA').map(([k,v]) =>
+      `<div class="srow"><span class="slbl">${v.flag} 1 ${k}</span><span class="sval">${Number(v.rate).toLocaleString('fr-FR')} FCFA</span></div>`).join('');
+  }
+  convertCurrency();
+}
+
+function setCurrency(c) {
+  LS.s('active_currency', c);
+  CFG.CURRENCY = c === 'FCFA' ? 'FCFA' : CURRENCIES[c]?.symbol || c;
+  toast(`Devise : ${CURRENCIES[c]?.flag} ${c}`, 'ok');
+  loadCurrencyScreen();
+}
+
+function convertCurrency() {
+  const val = parseFloat(q('#conv-input')?.value) || 0;
+  const el = q('#conv-results');
+  if (!el) return;
+  el.innerHTML = Object.entries(CURRENCIES).filter(([k])=>k!=='FCFA').map(([k,v]) => {
+    const converted = val / v.rate;
+    return `<div style="background:var(--surf);border-radius:var(--r8);padding:var(--s2) var(--s3);display:flex;justify-content:space-between;align-items:center">
+      <span style="font-size:14px;font-weight:700;color:var(--t2)">${v.flag} ${k}</span>
+      <span style="font-family:var(--fh);font-size:16px;font-weight:800;color:var(--g2)">${converted.toFixed(2)} ${v.symbol}</span>
+    </div>`;
+  }).join('');
+}
+
+/* ════════════════════════════════════════════════════
+   9. CATALOGUE PUBLIC AMÉLIORÉ — Hero + catégories
+════════════════════════════════════════════════════ */
+function renderPublicShop() {
+  const shopScr = document.getElementById('scr-shop');
+  shopScr.classList.add('active');
+
+  q('#botnav').innerHTML = `
+    <div class="ni on" onclick="renderPublicShop()">
+      <div class="nibox"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+      <span class="nlabel">Boutique</span>
+    </div>
+    <div class="ni" onclick="openCart()">
+      <div class="nibox" style="position:relative">
+        <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span id="cbadge2" style="position:absolute;top:-4px;right:-4px;background:var(--err);color:#fff;font-size:10px;font-weight:800;border-radius:50%;width:18px;height:18px;display:none;align-items:center;justify-content:center">0</span>
+      </div>
+      <span class="nlabel">Panier</span>
+    </div>`;
+  q('#botnav').style.display = 'flex';
+  updateCartBadge();
+
+  // Hero slider public
+  renderHeroSlider();
+
+  const g = q('#sgrid');
+  if (!S.products.length) {
+    g.innerHTML = `<div class="empty" style="grid-column:1/-1">
+      <svg width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+      <p>Boutique vide</p><span>Aucun produit disponible pour le moment</span>
+    </div>`;
+    return;
+  }
+
+  g.innerHTML = S.products.map(p => {
+    const ic = S.cart.find(c => c.id === p.id);
+    return `
+    <div class="spcard">
+      <div class="spthumb">${p.image_url
+        ? `<img src="${p.image_url}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover">`
+        : `<svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="var(--t4)" stroke-width="1"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14"/></svg>`}
+      </div>
+      <div class="spinfo">
+        <div class="pname">${p.name}</div>
+        <div class="pcat">${p.category || ''}</div>
+        ${p.description ? `<div style="font-size:11px;color:var(--t3);margin:4px 0">${p.description}</div>` : ''}
+        <div class="pprice" style="margin-top:6px">${fmt(p.price)}</div>
+      </div>
+      <button class="spadd${ic ? ' in' : ''}" onclick="addToCartPublic('${p.id}')" id="ab-${p.id}">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path d="${ic ? 'M5 13l4 4L19 7' : 'M12 5v14M5 12h14'}"/>
+        </svg>
+        ${ic ? `Dans le panier (${ic.qty})` : 'Ajouter'}
+      </button>
+    </div>`;
+  }).join('');
+}
+
+/* ════════════════════════════════════════════════════
+   10. AUTO-FIDÉLITÉ AU CHECKOUT
+════════════════════════════════════════════════════ */
+// Les points sont ajoutés automatiquement via un patch de la fonction checkout existante
+// Voir ci-dessous : patchCheckoutForLoyalty() appelé au démarrage
+
+function patchCheckoutForLoyalty() {
+  const _orig = window.checkout;
+  if (!_orig || window._loyaltyPatched) return;
+  window._loyaltyPatched = true;
+  window.checkout = async function() {
+    const cartTotal = S.cart.reduce((s,i)=>s+i.price*i.qty,0);
+    await _orig.call(this, ...arguments);
+    if (cartTotal > 0) {
+      addLoyaltyPoints(cartTotal);
+      const gained = Math.floor(cartTotal / 1000);
+      if (gained > 0) toast(`+${gained} point${gained>1?'s':''} fidélité gagné${gained>1?'s':''}! ⭐`, 'ok');
+    }
+  };
+}
+
+/* ── Init Premium + nouveaux écrans au démarrage ── */
 document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(patchCheckoutForLoyalty, 3000);
+
   // Vérifier expiration après connexion
   setTimeout(() => {
     checkSubscriptionExpiry();
