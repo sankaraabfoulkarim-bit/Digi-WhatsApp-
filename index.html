@@ -544,6 +544,134 @@ input,textarea,select{font-family:inherit;outline:none}
 .plan-desc{font-size:12px;color:rgba(255,255,255,.4);margin-top:2px}
 .plan-price{font-family:var(--fh);font-size:16px;font-weight:800;color:#a78bfa}
 
+/* ── NEW FEATURES CSS ─────────────────── */
+/* Achat/Fournisseur */
+.purch-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);border-left:4px solid var(--info)}
+.purch-supplier{font-size:15px;font-weight:800;color:var(--t1)}
+.purch-date{font-size:11px;color:var(--t3)}
+.purch-amount{font-family:var(--fh);font-size:16px;font-weight:800;color:var(--err)}
+
+/* Templates WA */
+.tpl-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr)}
+.tpl-name{font-size:14px;font-weight:800;color:var(--t1);margin-bottom:4px}
+.tpl-preview{font-size:12px;color:var(--t2);line-height:1.5;white-space:pre-wrap;max-height:60px;overflow:hidden;text-overflow:ellipsis}
+
+/* Goal progress */
+.goal-bar{height:12px;background:var(--surf);border-radius:var(--r99);overflow:hidden;margin:var(--s2) 0}
+.goal-fill{height:100%;border-radius:var(--r99);background:linear-gradient(90deg,var(--g2),var(--g3));transition:width .6s ease}
+.goal-fill.danger{background:linear-gradient(90deg,var(--err),#ff6b6b)}
+.goal-fill.gold{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+
+/* Express caisse */
+.exp-product{background:var(--card);border-radius:var(--r12);padding:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);cursor:pointer;transition:all .15s;text-align:center}
+.exp-product:active{transform:scale(.95);border-color:var(--g2)}
+.exp-product .pname{font-size:11px;margin-top:4px}
+.exp-product .pprice{font-size:12px;font-weight:800;color:var(--g2)}
+
+/* Analytics */
+.analytics-kpi{background:var(--card);border-radius:var(--r12);padding:var(--s3);box-shadow:var(--sh1);border:1px solid var(--bdr);text-align:center}
+.analytics-kpi-val{font-family:var(--fh);font-size:20px;font-weight:800;color:var(--g2)}
+.analytics-kpi-lbl{font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+
+.top-product-row{display:flex;align-items:center;gap:var(--s2);padding:var(--s2) 0;border-bottom:1px solid var(--bdr)}
+.top-product-rank{width:28px;height:28px;border-radius:50%;background:var(--surf);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--t2);flex-shrink:0}
+.top-product-rank.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3d2800}
+
+.hour-bar{flex:1;background:var(--g2);border-radius:3px 3px 0 0;min-height:4px;transition:height .3s;opacity:.7}
+.hour-bar.peak{opacity:1;background:var(--gold)}
+
+.funnel-row{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2)}
+.funnel-bar-wrap{flex:1;height:8px;background:var(--surf);border-radius:var(--r99);overflow:hidden}
+.funnel-bar{height:100%;border-radius:var(--r99);background:linear-gradient(90deg,var(--g2),var(--g3))}
+
+/* Notes */
+.note-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);border-left:4px solid var(--gold);position:relative}
+.note-title{font-size:14px;font-weight:800;color:var(--t1)}
+.note-body{font-size:13px;color:var(--t2);margin-top:4px;line-height:1.5}
+.note-date{font-size:10px;color:var(--t3);margin-top:6px}
+.note-del{position:absolute;top:var(--s2);right:var(--s2);width:28px;height:28px;display:flex;align-items:center;justify-content:center;color:var(--t4);cursor:pointer}
+
+/* Remboursements */
+.refund-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);border-left:4px solid var(--err)}
+
+/* Schedule */
+.sched-day{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);border:1px solid var(--bdr);display:flex;align-items:center;gap:var(--s3)}
+.sched-day-name{width:60px;font-size:13px;font-weight:800;color:var(--t1)}
+.sched-inputs{display:flex;gap:6px;flex:1;align-items:center}
+.sched-inputs input[type=time]{flex:1;border:1.5px solid var(--bdr);border-radius:var(--r8);padding:8px 10px;font-size:13px;color:var(--t1);background:var(--card);font-family:var(--fb)}
+
+/* Share product button */
+.share-product-btn{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(37,211,102,.1);color:var(--wa);border-radius:var(--r8);font-size:13px;font-weight:700;cursor:pointer;transition:all .15s}
+.share-product-btn:active{background:rgba(37,211,102,.2)}
+
+/* Purchases */
+#scr-purchases,#scr-calculator,#scr-templates,#scr-express,#scr-goals,#scr-schedule,#scr-analytics,#scr-notes,#scr-refunds{display:none;flex-direction:column;min-height:100vh;padding-bottom:var(--bot);animation:fadeUp .25s ease}
+#scr-purchases.active,#scr-calculator.active,#scr-templates.active,#scr-express.active,#scr-goals.active,#scr-schedule.active,#scr-analytics.active,#scr-notes.active,#scr-refunds.active{display:flex}
+
+/* ── NEW FEATURES CSS ─────────────────── */
+/* Achat/Fournisseur */
+.purch-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);border-left:4px solid var(--info)}
+.purch-supplier{font-size:15px;font-weight:800;color:var(--t1)}
+.purch-date{font-size:11px;color:var(--t3)}
+.purch-amount{font-family:var(--fh);font-size:16px;font-weight:800;color:var(--err)}
+
+/* Templates WA */
+.tpl-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr)}
+.tpl-name{font-size:14px;font-weight:800;color:var(--t1);margin-bottom:4px}
+.tpl-preview{font-size:12px;color:var(--t2);line-height:1.5;white-space:pre-wrap;max-height:60px;overflow:hidden;text-overflow:ellipsis}
+
+/* Goal progress */
+.goal-bar{height:12px;background:var(--surf);border-radius:var(--r99);overflow:hidden;margin:var(--s2) 0}
+.goal-fill{height:100%;border-radius:var(--r99);background:linear-gradient(90deg,var(--g2),var(--g3));transition:width .6s ease}
+.goal-fill.danger{background:linear-gradient(90deg,var(--err),#ff6b6b)}
+.goal-fill.gold{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+
+/* Express caisse */
+.exp-product{background:var(--card);border-radius:var(--r12);padding:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);cursor:pointer;transition:all .15s;text-align:center}
+.exp-product:active{transform:scale(.95);border-color:var(--g2)}
+.exp-product .pname{font-size:11px;margin-top:4px}
+.exp-product .pprice{font-size:12px;font-weight:800;color:var(--g2)}
+
+/* Analytics */
+.analytics-kpi{background:var(--card);border-radius:var(--r12);padding:var(--s3);box-shadow:var(--sh1);border:1px solid var(--bdr);text-align:center}
+.analytics-kpi-val{font-family:var(--fh);font-size:20px;font-weight:800;color:var(--g2)}
+.analytics-kpi-lbl{font-size:10px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+
+.top-product-row{display:flex;align-items:center;gap:var(--s2);padding:var(--s2) 0;border-bottom:1px solid var(--bdr)}
+.top-product-rank{width:28px;height:28px;border-radius:50%;background:var(--surf);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--t2);flex-shrink:0}
+.top-product-rank.gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3d2800}
+
+.hour-bar{flex:1;background:var(--g2);border-radius:3px 3px 0 0;min-height:4px;transition:height .3s;opacity:.7}
+.hour-bar.peak{opacity:1;background:var(--gold)}
+
+.funnel-row{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2)}
+.funnel-bar-wrap{flex:1;height:8px;background:var(--surf);border-radius:var(--r99);overflow:hidden}
+.funnel-bar{height:100%;border-radius:var(--r99);background:linear-gradient(90deg,var(--g2),var(--g3))}
+
+/* Notes */
+.note-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);border-left:4px solid var(--gold);position:relative}
+.note-title{font-size:14px;font-weight:800;color:var(--t1)}
+.note-body{font-size:13px;color:var(--t2);margin-top:4px;line-height:1.5}
+.note-date{font-size:10px;color:var(--t3);margin-top:6px}
+.note-del{position:absolute;top:var(--s2);right:var(--s2);width:28px;height:28px;display:flex;align-items:center;justify-content:center;color:var(--t4);cursor:pointer}
+
+/* Remboursements */
+.refund-card{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);box-shadow:var(--sh1);border:1px solid var(--bdr);border-left:4px solid var(--err)}
+
+/* Schedule */
+.sched-day{background:var(--card);border-radius:var(--r12);padding:var(--s3);margin-bottom:var(--s2);border:1px solid var(--bdr);display:flex;align-items:center;gap:var(--s3)}
+.sched-day-name{width:60px;font-size:13px;font-weight:800;color:var(--t1)}
+.sched-inputs{display:flex;gap:6px;flex:1;align-items:center}
+.sched-inputs input[type=time]{flex:1;border:1.5px solid var(--bdr);border-radius:var(--r8);padding:8px 10px;font-size:13px;color:var(--t1);background:var(--card);font-family:var(--fb)}
+
+/* Share product button */
+.share-product-btn{display:flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(37,211,102,.1);color:var(--wa);border-radius:var(--r8);font-size:13px;font-weight:700;cursor:pointer;transition:all .15s}
+.share-product-btn:active{background:rgba(37,211,102,.2)}
+
+/* Purchases */
+#scr-purchases,#scr-calculator,#scr-templates,#scr-express,#scr-goals,#scr-schedule,#scr-analytics,#scr-notes,#scr-refunds{display:none;flex-direction:column;min-height:100vh;padding-bottom:var(--bot);animation:fadeUp .25s ease}
+#scr-purchases.active,#scr-calculator.active,#scr-templates.active,#scr-express.active,#scr-goals.active,#scr-schedule.active,#scr-analytics.active,#scr-notes.active,#scr-refunds.active{display:flex}
+
 </style>
 </head>
 <body>
@@ -646,6 +774,7 @@ input,textarea,select{font-family:inherit;outline:none}
     <div class="dgreet" id="dgreet">Bonjour,</div>
     <div class="dname" id="dname">…</div>
     <div class="dshop">🏪 <span id="dshop"></span></div>
+    <div style="display:flex;align-items:center;gap:var(--s2);margin-top:4px"><span id="shop-status-badge" style="font-size:11px;font-weight:700;color:var(--ok)"></span></div>
   </div>
   <div class="dcards">
     <div class="dc accent"><div class="dcico" style="background:rgba(255,255,255,.15)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2"/></svg></div><div class="dcv" id="d-orders">0</div><div class="dcl">Commandes</div></div>
@@ -664,7 +793,11 @@ input,textarea,select{font-family:inherit;outline:none}
       <div class="qa" onclick="go('clients')"><div class="qaico" style="background:rgba(6,182,212,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div><span class="qal">Clients</span></div>
       <div class="qa" onclick="go('promos')"><div class="qaico" style="background:rgba(239,68,68,.1)"><svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#EF4444" stroke-width="2"><path d="M7 7h.01M17 17h.01M3.5 3.5l17 17M9 3H5a2 2 0 00-2 2v4M15 3h4a2 2 0 012 2v4M3 15v4a2 2 0 002 2h4M15 21h4a2 2 0 002-2v-4"/></svg></div><span class="qal">Promos</span></div>
       <div class="qa" onclick="sendDayReport()"><div class="qaico" style="background:rgba(37,211,102,.1)"><svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg></div><span class="qal">Rapport WA</span></div>
-      <div class="qa" onclick="go('reviews')"><div class="qaico" style="background:rgba(245,158,11,.1)"><span style="font-size:22px">⭐</span></div><span class="qal">Avis</span></div>
+      <div class="qa" onclick="go('express')"><div class="qaico" style="background:rgba(245,158,11,.1)"><span style="font-size:22px">⚡</span></div><span class="qal">Caisse express</span></div>
+      <div class="qa" onclick="go('analytics')"><div class="qaico" style="background:rgba(239,68,68,.1)"><span style="font-size:22px">📈</span></div><span class="qal">Analytics</span></div>
+      <div class="qa" onclick="go('goals')"><div class="qaico" style="background:rgba(139,92,246,.1)"><span style="font-size:22px">🎯</span></div><span class="qal">Objectifs</span></div>
+      <div class="qa" onclick="go('notes')"><div class="qaico" style="background:rgba(201,168,76,.1)"><span style="font-size:22px">📝</span></div><span class="qal">Notes</span></div>
+            <div class="qa" onclick="go('reviews')"><div class="qaico" style="background:rgba(245,158,11,.1)"><span style="font-size:22px">⭐</span></div><span class="qal">Avis</span></div>
       <div class="qa" onclick="go('delivery')"><div class="qaico" style="background:rgba(16,185,129,.1)"><span style="font-size:22px">🚚</span></div><span class="qal">Livraisons</span></div>
       <div class="qa" onclick="go('loyalty')"><div class="qaico" style="background:rgba(201,168,76,.1)"><span style="font-size:22px">🌟</span></div><span class="qal">Fidélité</span></div>
     </div>
@@ -897,6 +1030,52 @@ input,textarea,select{font-family:inherit;outline:none}
       <div class="sinfo"><div class="slabel">Codes promotionnels</div><div class="sdesc">Réductions & offres spéciales</div></div>
       <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
     </div>
+    <div class="srow2" onclick="go('purchases')">
+      <div class="sico" style="background:rgba(33,150,243,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#2196F3" stroke-width="2"><path d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8l1 12a2 2 0 002 2h8a2 2 0 002-2l1-12"/></svg></div>
+      <div class="sinfo"><div class="slabel">Achats fournisseurs</div><div class="sdesc">Gérer vos entrées de stock</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('calculator')">
+      <div class="sico" style="background:rgba(201,168,76,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg></div>
+      <div class="sinfo"><div class="slabel">Calculateur prix</div><div class="sdesc">Marge, remise & prix de revient</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('templates')">
+      <div class="sico" style="background:rgba(37,211,102,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#25D366" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Modèles messages WA</div><div class="sdesc">Templates personnalisables</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('express')">
+      <div class="sico" style="background:rgba(245,158,11,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#F59E0B" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+      <div class="sinfo"><div class="slabel">Caisse express</div><div class="sdesc">Vente rapide 1 clic</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('goals')">
+      <div class="sico" style="background:rgba(139,92,246,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#7C3AED" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <div class="sinfo"><div class="slabel">Objectifs de vente</div><div class="sdesc">Cibles journalières & mensuelles</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('schedule')">
+      <div class="sico" style="background:rgba(6,182,212,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#0891B2" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+      <div class="sinfo"><div class="slabel">Horaires boutique</div><div class="sdesc">Heures d'ouverture & fermeture</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('analytics')">
+      <div class="sico" style="background:rgba(239,68,68,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#EF4444" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="sinfo"><div class="slabel">Analytics avancés</div><div class="sdesc">Tendances, funnel, heures de pointe</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('notes')">
+      <div class="sico" style="background:rgba(201,168,76,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#C9A84C" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+      <div class="sinfo"><div class="slabel">Notes & mémos</div><div class="sdesc">Rappels et pense-bêtes</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+    <div class="srow2" onclick="go('refunds')">
+      <div class="sico" style="background:rgba(229,57,53,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#E53935" stroke-width="2"><path d="M3 12a9 9 0 009 9 9 9 0 006.36-2.64M3 12a9 9 0 019-9 9 9 0 016.36 2.64M3 12h4m14 0h-4"/></svg></div>
+      <div class="sinfo"><div class="slabel">Remboursements</div><div class="sdesc">Retours & échanges clients</div></div>
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="var(--t3)" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+    </div>
+
     <div class="srow2" onclick="exportInventoryCSV()">
       <div class="sico" style="background:rgba(16,185,129,.1)"><svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#10B981" stroke-width="2"><path d="M12 10v6m0 0l-3-3m3 3l3-3M3 17V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
       <div class="sinfo"><div class="slabel">Export inventaire CSV</div><div class="sdesc">Télécharger la liste de produits</div></div>
@@ -1078,6 +1257,216 @@ input,textarea,select{font-family:inherit;outline:none}
   </div>
   <div style="padding:var(--s3)" id="notif-list"></div>
 </div>
+
+
+<!-- ════ FONCTIONNALITÉ 1 : ACHATS / FOURNISSEURS ════ -->
+<div id="scr-purchases" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">📦 Achats</div><div class="topbar-sub" id="purchases-count">0 entrée(s)</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openAddPurchase()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div class="chips" id="purch-chips" style="padding:var(--s2) var(--s3)">
+    <div class="chip on" onclick="filterPurchases('all',this)">Tous</div>
+    <div class="chip" onclick="filterPurchases('week',this)">Cette semaine</div>
+    <div class="chip" onclick="filterPurchases('month',this)">Ce mois</div>
+  </div>
+  <div style="padding:0 var(--s3) var(--s3)">
+    <div style="background:linear-gradient(135deg,var(--g2),var(--g1));border-radius:var(--r16);padding:var(--s3);color:#fff;margin-bottom:var(--s3)">
+      <div style="font-size:11px;opacity:.7;font-weight:700;text-transform:uppercase;letter-spacing:.5px">Total achats (mois)</div>
+      <div style="font-family:var(--fh);font-size:26px;font-weight:800;margin-top:4px" id="purch-total-month">0 FCFA</div>
+    </div>
+    <div id="purch-list"></div>
+  </div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 2 : CALCULATEUR PRIX ════ -->
+<div id="scr-calculator" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🧮 Calculateur</div><div class="topbar-sub">Prix, marge, remise</div></div>
+  </div>
+  <div style="padding:var(--s3);display:flex;flex-direction:column;gap:var(--s3)">
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">💰 Calcul de marge</div>
+      <div class="field"><label>Prix d'achat (FCFA)</label><div class="iw bare"><input id="calc-buy" type="number" inputmode="numeric" placeholder="5000" style="padding-left:14px" oninput="calcMargin()"></div></div>
+      <div class="field"><label>Prix de vente (FCFA)</label><div class="iw bare"><input id="calc-sell" type="number" inputmode="numeric" placeholder="8000" style="padding-left:14px" oninput="calcMargin()"></div></div>
+      <div id="calc-margin-result" style="background:var(--surf);border-radius:var(--r12);padding:var(--s3);display:none">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:var(--t2)">Marge brute</span><span id="calc-margin-val" style="font-family:var(--fh);font-size:15px;font-weight:800;color:var(--g2)">0 FCFA</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--t2)">Taux de marge</span><span id="calc-margin-pct" style="font-family:var(--fh);font-size:15px;font-weight:800;color:var(--ok)">0%</span></div>
+      </div>
+    </div>
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">🏷️ Simulateur remise</div>
+      <div class="field"><label>Prix original (FCFA)</label><div class="iw bare"><input id="disc-price" type="number" inputmode="numeric" placeholder="10000" style="padding-left:14px" oninput="calcDiscount()"></div></div>
+      <div class="field"><label>Remise (%)</label><div class="iw bare"><input id="disc-pct" type="number" inputmode="numeric" placeholder="20" style="padding-left:14px" oninput="calcDiscount()"></div></div>
+      <div id="disc-result" style="background:var(--surf);border-radius:var(--r12);padding:var(--s3);display:none">
+        <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-size:13px;color:var(--t2)">Prix remisé</span><span id="disc-new-price" style="font-family:var(--fh);font-size:18px;font-weight:800;color:var(--err)">0 FCFA</span></div>
+        <div style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--t2)">Économie client</span><span id="disc-saving" style="font-size:13px;font-weight:700;color:var(--warn)">0 FCFA</span></div>
+      </div>
+    </div>
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">📦 Prix de revient global</div>
+      <div class="field"><label>Coût produit (FCFA)</label><div class="iw bare"><input id="rc-cost" type="number" inputmode="numeric" placeholder="3000" style="padding-left:14px" oninput="calcRevient()"></div></div>
+      <div class="field"><label>Frais d'envoi (FCFA)</label><div class="iw bare"><input id="rc-ship" type="number" inputmode="numeric" placeholder="500" style="padding-left:14px" oninput="calcRevient()"></div></div>
+      <div class="field"><label>Autres frais (FCFA)</label><div class="iw bare"><input id="rc-other" type="number" inputmode="numeric" placeholder="200" style="padding-left:14px" oninput="calcRevient()"></div></div>
+      <div id="rc-result" style="background:var(--surf);border-radius:var(--r12);padding:var(--s3);margin-top:var(--s2)">
+        <div style="display:flex;justify-content:space-between"><span style="font-size:13px;color:var(--t2)">Prix de revient</span><span id="rc-total" style="font-family:var(--fh);font-size:18px;font-weight:800;color:var(--gold)">0 FCFA</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 3 : MODÈLES MESSAGES WA ════ -->
+<div id="scr-templates" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">💬 Messages WA</div><div class="topbar-sub">Modèles personnalisables</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openAddTemplate()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div style="padding:var(--s3)">
+    <div style="font-size:13px;color:var(--t2);background:var(--surf);border-radius:var(--r8);padding:var(--s2) var(--s3);margin-bottom:var(--s3)">
+      💡 Variables disponibles : <strong>{shop}</strong> {client} {total} {date}
+    </div>
+    <div id="templates-list"></div>
+  </div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 4 : CAISSE EXPRESS ════ -->
+<div id="scr-express" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">⚡ Caisse express</div><div class="topbar-sub">Vente rapide</div></div>
+    <div class="topbar-r">
+      <button class="btn btn-ghost icon" onclick="clearExpress()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6l-1 14H6L5 6M10 11v6M14 11v6M8 6V4a1 1 0 011-1h6a1 1 0 011 1v2"/></svg></button>
+    </div>
+  </div>
+  <div style="padding:var(--s3)">
+    <!-- Recherche rapide -->
+    <div style="position:relative;margin-bottom:var(--s3)">
+      <svg style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--t3)" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input id="express-search" class="sin" style="border-radius:var(--r12)" placeholder="Chercher un produit..." oninput="searchExpress(this.value)">
+    </div>
+    <!-- Résultats rapides -->
+    <div id="express-results" class="pgrid" style="padding:0;margin-bottom:var(--s3)"></div>
+    <!-- Panier express -->
+    <div id="express-cart-section" style="display:none">
+      <div class="stitle">🛒 Sélection</div>
+      <div id="express-items" style="margin-bottom:var(--s3)"></div>
+      <div style="background:var(--card);border-radius:var(--r16);padding:var(--s3);border:1px solid var(--bdr);box-shadow:var(--sh2);margin-bottom:var(--s3)">
+        <div class="srow"><span class="slbl">Sous-total</span><span id="exp-subtotal" class="sval">0 FCFA</span></div>
+        <div class="srow"><label style="font-size:13px;color:var(--t2)">Remise manuelle</label>
+          <input id="exp-discount" type="number" min="0" placeholder="0" inputmode="numeric" style="width:80px;text-align:right;border:1.5px solid var(--bdr);border-radius:var(--r8);padding:4px 8px;font-size:14px;font-weight:700;color:var(--t1);background:var(--card)" oninput="updateExpressTotal()"> FCFA
+        </div>
+        <div class="srow total"><span class="slbl">TOTAL</span><span id="exp-total" class="sval" style="font-family:var(--fh);font-size:22px;font-weight:800;color:var(--g2)">0 FCFA</span></div>
+      </div>
+      <div class="field"><label>Nom client</label><div class="iw bare"><input id="exp-client" type="text" placeholder="Client" style="padding-left:14px"></div></div>
+      <div style="display:flex;gap:var(--s2)">
+        <button class="btn btn-g" style="flex:1" onclick="expressCheckout('cash')">💵 Espèces</button>
+        <button class="btn btn-wa" style="flex:1" onclick="expressCheckout('wa')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+          WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 5 : OBJECTIFS VENTES ════ -->
+<div id="scr-goals" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🎯 Objectifs</div><div class="topbar-sub">Cibles journalières & mensuelles</div></div>
+  </div>
+  <div style="padding:var(--s3);display:flex;flex-direction:column;gap:var(--s3)">
+    <!-- Objectif du jour -->
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">☀️ Objectif du jour</div>
+      <div class="field"><label>Cible en FCFA</label><div class="iw bare"><input id="goal-daily" type="number" inputmode="numeric" placeholder="50000" style="padding-left:14px" oninput="saveGoals()"></div></div>
+      <div id="goal-daily-progress"></div>
+    </div>
+    <!-- Objectif mensuel -->
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">📅 Objectif mensuel</div>
+      <div class="field"><label>Cible en FCFA</label><div class="iw bare"><input id="goal-monthly" type="number" inputmode="numeric" placeholder="1500000" style="padding-left:14px" oninput="saveGoals()"></div></div>
+      <div id="goal-monthly-progress"></div>
+    </div>
+    <!-- Objectif commandes -->
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">🛍️ Objectif commandes</div>
+      <div class="field"><label>Nombre de commandes/mois</label><div class="iw bare"><input id="goal-orders" type="number" inputmode="numeric" placeholder="50" style="padding-left:14px" oninput="saveGoals()"></div></div>
+      <div id="goal-orders-progress"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 6 : PARTAGE PRODUIT DIRECT ════ -->
+<!-- (Intégré dans le modal produit existant via un bouton) -->
+
+<!-- ════ FONCTIONNALITÉ 7 : HORAIRES BOUTIQUE ════ -->
+<div id="scr-schedule" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">🕐 Horaires</div><div class="topbar-sub">Planification & disponibilités</div></div>
+    <div class="topbar-r"><button class="btn btn-g sm" onclick="saveSchedule()">Sauvegarder</button></div>
+  </div>
+  <div style="padding:var(--s3)">
+    <div id="schedule-days"></div>
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2);margin-top:var(--s3)">
+      <div class="stitle" style="margin-bottom:var(--s3)">📢 Message de fermeture</div>
+      <div class="field"><div class="iw bare"><textarea id="schedule-closed-msg" placeholder="Désolé, la boutique est actuellement fermée. Revenez demain à 8h !" style="padding-left:14px;min-height:80px"></textarea></div></div>
+      <button class="btn btn-wa full" onclick="sendClosedMsgWA()">📲 Envoyer via WhatsApp</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 8 : ANALYTICS AVANCÉ ════ -->
+<div id="scr-analytics" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">📈 Analytics</div><div class="topbar-sub">Tendances & performances</div></div>
+  </div>
+  <div style="padding:var(--s3);display:flex;flex-direction:column;gap:var(--s3)">
+    <!-- KPIs -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)" id="analytics-kpis"></div>
+    <!-- Produits les plus vendus -->
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">🏆 Top 5 produits</div>
+      <div id="analytics-top-products"></div>
+    </div>
+    <!-- Heures de pointe -->
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">⏰ Activité par heure</div>
+      <div id="analytics-hours" style="display:flex;align-items:flex-end;gap:3px;height:80px"></div>
+      <div style="display:flex;justify-content:space-between;margin-top:4px;font-size:9px;color:var(--t3)">
+        <span>6h</span><span>9h</span><span>12h</span><span>15h</span><span>18h</span><span>21h</span>
+      </div>
+    </div>
+    <!-- Taux de conversion -->
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s4);border:1px solid var(--bdr);box-shadow:var(--sh2)">
+      <div class="stitle" style="margin-bottom:var(--s3)">🎯 Funnel de conversion</div>
+      <div id="analytics-funnel"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 9 : NOTES INTERNES ════ -->
+<div id="scr-notes" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">📝 Notes</div><div class="topbar-sub">Mémo & rappels</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openAddNote()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div style="padding:var(--s3)" id="notes-list"></div>
+</div>
+
+<!-- ════ FONCTIONNALITÉ 10 : GESTION REMBOURSEMENTS ════ -->
+<div id="scr-refunds" class="screen">
+  <div class="topbar">
+    <div class="topbar-l"><div class="topbar-title">↩️ Remboursements</div><div class="topbar-sub">Retours & échanges</div></div>
+    <div class="topbar-r"><button class="btn btn-g icon" onclick="openAddRefund()"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+  </div>
+  <div style="padding:var(--s3)">
+    <div style="background:var(--card);border-radius:var(--r16);padding:var(--s3);border:1px solid var(--bdr);box-shadow:var(--sh2);margin-bottom:var(--s3);display:grid;grid-template-columns:1fr 1fr;gap:var(--s2)">
+      <div style="text-align:center"><div style="font-family:var(--fh);font-size:20px;font-weight:800;color:var(--err)" id="refund-total-amount">0</div><div style="font-size:11px;color:var(--t3)">Total remboursé</div></div>
+      <div style="text-align:center"><div style="font-family:var(--fh);font-size:20px;font-weight:800;color:var(--warn)" id="refund-count">0</div><div style="font-size:11px;color:var(--t3)">Retours</div></div>
+    </div>
+    <div id="refunds-list"></div>
+  </div>
+</div>
+
 
 </div><!-- /app -->
 
@@ -1485,6 +1874,15 @@ function go(s) {
     variants:      loadVariants,
     'slider-config': loadSliderConfig,
     currency:      loadCurrencyScreen,
+    purchases:     loadPurchases,
+    calculator:    loadCalculator,
+    templates:     loadTemplates,
+    express:       loadExpress,
+    goals:         loadGoals,
+    schedule:      loadSchedule,
+    analytics:     loadAnalytics,
+    notes:         loadNotes,
+    refunds:       loadRefunds,
   };
   if (cbs[s]) cbs[s]();
 }
@@ -1534,7 +1932,7 @@ function renderProducts() {
     <div class="pcard" onclick="openEditProduct('${p.id}')">
       <div class="pthumb">${p.image_url?`<img src="${p.image_url}" alt="${p.name}" loading="lazy">`:`<svg width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="var(--t4)" stroke-width="1"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>`}
       <span class="pbadge ${b.cls}">${b.lbl}</span></div>
-      <div class="pinfo"><div class="pname">${p.name}</div><div class="pcat">${p.category||'Non classé'}</div><div class="pprice">${fmt(p.price)}</div><div class="pstock">Stock : ${p.stock}</div></div>
+      <div class="pinfo"><div class="pname">${p.name}</div><div class="pcat">${p.category||'Non classé'}</div><div class="pprice">${fmt(p.price)}</div><div class="pstock">Stock : ${p.stock}</div><button class="share-product-btn" style="margin-top:6px;width:100%;justify-content:center" onclick="event.stopPropagation();shareProductWA('${p.id}')"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>Partager</button></div>
     </div>`; }).join('');
   // chips cats
   const cats=['all',...new Set(S.products.map(p=>p.category).filter(Boolean))];
@@ -1623,7 +2021,7 @@ function renderCart() {
 function renderOrders(sf='all') {
   let list=S.orders;
   if(sf!=='all') list=list.filter(o=>o.status===sf);
-  const el=q('#olist'); if(!el) return;
+  const el=q('#olist'); if(!el) return; window._curOrderFilter=sf;
   if (!list.length) { el.innerHTML=`<div class="empty"><svg width="64" height="64" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/></svg><p>Aucune commande</p><span>Les commandes WhatsApp apparaîtront ici</span></div>`; return; }
   const sm={new:{cls:'s-new',lbl:'Nouvelle'},pending:{cls:'s-pending',lbl:'En attente'},validated:{cls:'s-validated',lbl:'Validée'},delivered:{cls:'s-delivered',lbl:'Livrée'}};
   el.innerHTML=list.map(o=>{ const s=sm[o.status]||sm.new; const items=(o.items||[]).map(i=>`${i.name} x${i.qty}`).join(', '); return `
@@ -3616,6 +4014,860 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   document.querySelectorAll('.sp-logo,.auth-icon,.shoplogo').forEach(el => el.addEventListener('click', handleLogoTap));
 });
+
+
+/* ═══════════════════════════════════════════════════════════
+   15 NOUVELLES FONCTIONNALITÉS AVANCÉES — WhatsApp Shop BF
+═══════════════════════════════════════════════════════════ */
+
+/* ─── Router extensions intégrées dans go() ci-dessous ─── */
+
+/* ═══════════════════════════════════════════════════════════
+   F1 — ACHATS / FOURNISSEURS
+═══════════════════════════════════════════════════════════ */
+function loadPurchases() {
+  const purchases = LS.g('purchases', []);
+  const now = new Date();
+  const monthPurchases = purchases.filter(p => {
+    const d = new Date(p.date);
+    return d.getMonth() === now.getMonth() && d.getFullYear() === now.getFullYear();
+  });
+  const monthTotal = monthPurchases.reduce((s,p) => s + (p.amount||0), 0);
+  const el = q('#purchases-count');
+  if (el) el.textContent = purchases.length + ' entrée(s)';
+  const mt = q('#purch-total-month');
+  if (mt) mt.textContent = fmt(monthTotal);
+  renderPurchasesList(purchases);
+}
+
+function renderPurchasesList(list) {
+  const el = q('#purch-list');
+  if (!el) return;
+  if (!list.length) { el.innerHTML = '<div class="empty"><p>Aucun achat enregistré</p><span>Ajoutez vos achats fournisseurs</span></div>'; return; }
+  el.innerHTML = list.slice().reverse().map(p => `
+    <div class="purch-card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div class="purch-supplier">${p.supplier || 'Fournisseur'}</div>
+          <div style="font-size:12px;color:var(--t2);margin:2px 0">${p.product || ''}</div>
+          <div class="purch-date">${fmtDate(p.date)} · Qté: ${p.qty||1}</div>
+        </div>
+        <div style="text-align:right">
+          <div class="purch-amount">${fmt(p.amount||0)}</div>
+          <button class="btn btn-out sm" style="margin-top:4px" onclick="deletePurchase('${p.id}')">🗑</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function filterPurchases(period, el) {
+  document.querySelectorAll('#purch-chips .chip').forEach(c=>c.classList.remove('on'));
+  if (el) el.classList.add('on');
+  let purchases = LS.g('purchases', []);
+  const now = new Date();
+  if (period === 'week') {
+    const wStart = new Date(now); wStart.setDate(now.getDate() - 7);
+    purchases = purchases.filter(p => new Date(p.date) >= wStart);
+  } else if (period === 'month') {
+    purchases = purchases.filter(p => { const d=new Date(p.date); return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear(); });
+  }
+  renderPurchasesList(purchases);
+}
+
+function openAddPurchase() {
+  const ov = document.createElement('div');
+  ov.className = 'overlay open'; ov.id = 'purchase-overlay';
+  ov.innerHTML = `<div class="modal">
+    <div class="mhandle"></div><div class="mtitle">📦 Nouvel achat</div>
+    <div class="field"><label>Fournisseur</label><div class="iw bare"><input id="pu-supplier" type="text" placeholder="Ali Commerce" style="padding-left:14px"></div></div>
+    <div class="field"><label>Produit acheté</label><div class="iw bare"><input id="pu-product" type="text" placeholder="Tissus coton" style="padding-left:14px"></div></div>
+    <div class="field"><label>Montant total (FCFA)</label><div class="iw bare"><input id="pu-amount" type="number" inputmode="numeric" placeholder="25000" style="padding-left:14px"></div></div>
+    <div class="field"><label>Quantité</label><div class="iw bare"><input id="pu-qty" type="number" inputmode="numeric" placeholder="10" style="padding-left:14px"></div></div>
+    <div class="field"><label>Date</label><div class="iw bare"><input id="pu-date" type="date" style="padding-left:14px" value="${new Date().toISOString().split('T')[0]}"></div></div>
+    <div class="mfooter">
+      <button class="btn btn-out" style="flex:1" onclick="document.getElementById('purchase-overlay').remove()">Annuler</button>
+      <button class="btn btn-g" style="flex:2" onclick="savePurchase()">Enregistrer</button>
+    </div>
+  </div>`;
+  ov.addEventListener('click', e => { if(e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+}
+
+function savePurchase() {
+  const purchases = LS.g('purchases', []);
+  const p = {
+    id: Date.now().toString(),
+    supplier: q('#pu-supplier')?.value.trim() || 'Fournisseur',
+    product: q('#pu-product')?.value.trim() || '',
+    amount: parseFloat(q('#pu-amount')?.value) || 0,
+    qty: parseInt(q('#pu-qty')?.value) || 1,
+    date: q('#pu-date')?.value || new Date().toISOString()
+  };
+  purchases.push(p);
+  LS.s('purchases', purchases);
+  document.getElementById('purchase-overlay')?.remove();
+  toast('Achat enregistré ✓', 'ok');
+  loadPurchases();
+}
+
+function deletePurchase(id) {
+  if (!confirm('Supprimer cet achat ?')) return;
+  let purchases = LS.g('purchases', []);
+  purchases = purchases.filter(p => p.id !== id);
+  LS.s('purchases', purchases);
+  toast('Supprimé', 'inf');
+  loadPurchases();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F2 — CALCULATEUR PRIX / MARGE
+═══════════════════════════════════════════════════════════ */
+function loadCalculator() { calcMargin(); calcDiscount(); calcRevient(); }
+
+function calcMargin() {
+  const buy = parseFloat(q('#calc-buy')?.value) || 0;
+  const sell = parseFloat(q('#calc-sell')?.value) || 0;
+  const res = q('#calc-margin-result');
+  if (!res) return;
+  if (buy > 0 && sell > 0) {
+    const margin = sell - buy;
+    const pct = ((margin / buy) * 100).toFixed(1);
+    q('#calc-margin-val').textContent = fmt(margin);
+    q('#calc-margin-pct').textContent = pct + '%';
+    q('#calc-margin-pct').style.color = margin >= 0 ? 'var(--ok)' : 'var(--err)';
+    res.style.display = 'block';
+  } else { res.style.display = 'none'; }
+}
+
+function calcDiscount() {
+  const price = parseFloat(q('#disc-price')?.value) || 0;
+  const pct = parseFloat(q('#disc-pct')?.value) || 0;
+  const res = q('#disc-result');
+  if (!res) return;
+  if (price > 0 && pct > 0) {
+    const saving = price * pct / 100;
+    const newPrice = price - saving;
+    q('#disc-new-price').textContent = fmt(newPrice);
+    q('#disc-saving').textContent = fmt(saving);
+    res.style.display = 'block';
+  } else { res.style.display = 'none'; }
+}
+
+function calcRevient() {
+  const cost = parseFloat(q('#rc-cost')?.value) || 0;
+  const ship = parseFloat(q('#rc-ship')?.value) || 0;
+  const other = parseFloat(q('#rc-other')?.value) || 0;
+  const total = cost + ship + other;
+  const el = q('#rc-total');
+  if (el) el.textContent = fmt(total);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F3 — MODÈLES MESSAGES WHATSAPP
+═══════════════════════════════════════════════════════════ */
+const DEFAULT_TEMPLATES = [
+  { id:'t1', name:'Confirmation commande', body:'✅ Bonjour {client} !\n\nVotre commande de *{total}* chez *{shop}* est confirmée.\nNous vous recontactons pour la livraison.\n\nMerci de votre confiance ! 🙏' },
+  { id:'t2', name:'Livraison en cours', body:'🚚 Bonjour {client},\n\nVotre commande est en route ! Elle sera livrée aujourd\'hui.\n\nEn cas de question, contactez-nous.\n\n— {shop}' },
+  { id:'t3', name:'Promotion spéciale', body:'🎁 Offre exclusive pour vous !\n\n⚡ *Réduction de 20%* sur tous nos produits aujourd\'hui seulement chez *{shop}*.\n\nCommandez vite avant la fin du stock ! 📲' },
+  { id:'t4', name:'Remerciement client', body:'💚 Merci {client} !\n\nNous avons bien reçu votre paiement de *{total}*.\n\nVotre satisfaction est notre priorité. N\'hésitez pas à laisser un avis ! ⭐\n\n— {shop}' },
+];
+
+function loadTemplates() {
+  const templates = LS.g('wa_templates', DEFAULT_TEMPLATES);
+  const el = q('#templates-list');
+  if (!el) return;
+  if (!templates.length) { el.innerHTML = '<div class="empty"><p>Aucun modèle</p></div>'; return; }
+  el.innerHTML = templates.map(t => `
+    <div class="tpl-card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+        <div class="tpl-name">${t.name}</div>
+        <div style="display:flex;gap:4px">
+          <button class="btn btn-wa sm" onclick="useTplWA('${t.id}')">📲</button>
+          <button class="btn btn-out sm" onclick="editTemplate('${t.id}')">✏️</button>
+          <button class="btn btn-out sm" style="color:var(--err)" onclick="deleteTemplate('${t.id}')">🗑</button>
+        </div>
+      </div>
+      <div class="tpl-preview">${t.body}</div>
+    </div>`).join('');
+}
+
+function useTplWA(id) {
+  const templates = LS.g('wa_templates', DEFAULT_TEMPLATES);
+  const t = templates.find(x => x.id === id);
+  if (!t) return;
+  const msg = t.body
+    .replace(/{shop}/g, S.shop?.name || 'Ma boutique')
+    .replace(/{client}/g, 'Client')
+    .replace(/{total}/g, '0 FCFA')
+    .replace(/{date}/g, new Date().toLocaleDateString('fr-FR'));
+  const wa = (S.shop?.wa || '').replace(/\D/g, '');
+  window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+function openAddTemplate() {
+  const ov = document.createElement('div');
+  ov.className = 'overlay open'; ov.id = 'tpl-overlay';
+  ov.innerHTML = `<div class="modal">
+    <div class="mhandle"></div><div class="mtitle">📝 Nouveau modèle</div>
+    <div class="field"><label>Nom du modèle</label><div class="iw bare"><input id="tpl-name" type="text" placeholder="Confirmation commande" style="padding-left:14px"></div></div>
+    <div class="field"><label>Message (utilisez {shop} {client} {total} {date})</label><div class="iw bare"><textarea id="tpl-body" placeholder="Bonjour {client}..." style="padding-left:14px;min-height:120px"></textarea></div></div>
+    <div class="mfooter">
+      <button class="btn btn-out" style="flex:1" onclick="document.getElementById('tpl-overlay').remove()">Annuler</button>
+      <button class="btn btn-g" style="flex:2" onclick="saveTemplate()">Sauvegarder</button>
+    </div>
+  </div>`;
+  ov.addEventListener('click', e => { if(e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+}
+
+function saveTemplate(id) {
+  const templates = LS.g('wa_templates', DEFAULT_TEMPLATES);
+  const name = q('#tpl-name')?.value.trim();
+  const body = q('#tpl-body')?.value.trim();
+  if (!name || !body) return toast('Champs requis','err');
+  if (id) {
+    const i = templates.findIndex(t => t.id === id);
+    if (i > -1) { templates[i].name = name; templates[i].body = body; }
+  } else {
+    templates.push({ id: Date.now().toString(), name, body });
+  }
+  LS.s('wa_templates', templates);
+  document.getElementById('tpl-overlay')?.remove();
+  toast('Modèle sauvegardé ✓', 'ok');
+  loadTemplates();
+}
+
+function editTemplate(id) {
+  const templates = LS.g('wa_templates', DEFAULT_TEMPLATES);
+  const t = templates.find(x => x.id === id);
+  if (!t) return;
+  openAddTemplate();
+  setTimeout(() => {
+    const ni = q('#tpl-name'); const bi = q('#tpl-body');
+    if (ni) ni.value = t.name;
+    if (bi) bi.value = t.body;
+    const btn = document.querySelector('#tpl-overlay .btn-g');
+    if (btn) btn.setAttribute('onclick', `saveTemplate('${id}')`);
+  }, 100);
+}
+
+function deleteTemplate(id) {
+  if (!confirm('Supprimer ce modèle ?')) return;
+  let templates = LS.g('wa_templates', DEFAULT_TEMPLATES);
+  templates = templates.filter(t => t.id !== id);
+  LS.s('wa_templates', templates);
+  loadTemplates();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F4 — CAISSE EXPRESS
+═══════════════════════════════════════════════════════════ */
+let expressCart = [];
+
+function loadExpress() {
+  expressCart = [];
+  const g = q('#express-results');
+  if (g) g.innerHTML = '';
+  updateExpressCartView();
+  searchExpress('');
+}
+
+function searchExpress(val) {
+  const prods = S.products.filter(p => p.available !== false && p.stock > 0);
+  const list = val.trim() ? prods.filter(p => p.name.toLowerCase().includes(val.toLowerCase())) : prods.slice(0, 8);
+  const g = q('#express-results');
+  if (!g) return;
+  if (!list.length) { g.innerHTML = '<p style="grid-column:1/-1;text-align:center;color:var(--t3);font-size:13px;padding:var(--s4)">Aucun produit</p>'; return; }
+  g.innerHTML = list.map(p => `
+    <div class="exp-product" onclick="addToExpressCart('${p.id}')">
+      <div style="height:60px;border-radius:var(--r8);background:var(--surf);overflow:hidden">${p.image_url ? `<img src="${p.image_url}" style="width:100%;height:100%;object-fit:cover">` : `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:24px">📦</div>`}</div>
+      <div class="pname">${p.name}</div>
+      <div class="pprice">${fmt(p.price)}</div>
+    </div>`).join('');
+}
+
+function addToExpressCart(id) {
+  const p = S.products.find(x => x.id === id);
+  if (!p) return;
+  const ex = expressCart.find(c => c.id === id);
+  if (ex) ex.qty++;
+  else expressCart.push({id:p.id, name:p.name, price:p.price, qty:1});
+  updateExpressCartView();
+  toast(p.name + ' ajouté ⚡', 'ok');
+}
+
+function updateExpressCartView() {
+  const sec = q('#express-cart-section');
+  const items = q('#express-items');
+  if (!sec || !items) return;
+  if (!expressCart.length) { sec.style.display = 'none'; return; }
+  sec.style.display = 'block';
+  items.innerHTML = expressCart.map(it => `
+    <div class="citem" style="margin-bottom:var(--s2)">
+      <div class="cinfo"><div class="cname">${it.name}</div><div class="cprice">${fmt(it.price)}</div></div>
+      <div class="qty">
+        <button class="qbtn" onclick="changeExpressQty('${it.id}',-1)">−</button>
+        <span class="qval">${it.qty}</span>
+        <button class="qbtn" onclick="changeExpressQty('${it.id}',1)">+</button>
+      </div>
+    </div>`).join('');
+  updateExpressTotal();
+}
+
+function changeExpressQty(id, d) {
+  const it = expressCart.find(c => c.id === id);
+  if (!it) return;
+  it.qty += d;
+  if (it.qty <= 0) expressCart = expressCart.filter(c => c.id !== id);
+  updateExpressCartView();
+}
+
+function updateExpressTotal() {
+  const subtotal = expressCart.reduce((s, i) => s + i.price * i.qty, 0);
+  const discount = parseFloat(q('#exp-discount')?.value) || 0;
+  const total = Math.max(0, subtotal - discount);
+  const st = q('#exp-subtotal'); if (st) st.textContent = fmt(subtotal);
+  const tt = q('#exp-total'); if (tt) tt.textContent = fmt(total);
+}
+
+function clearExpress() {
+  expressCart = [];
+  const di = q('#exp-discount'); if (di) di.value = '';
+  updateExpressCartView();
+  searchExpress('');
+  toast('Caisse vidée', 'inf');
+}
+
+async function expressCheckout(mode) {
+  if (!expressCart.length) return toast('Panier vide','err');
+  const client = q('#exp-client')?.value.trim() || 'Client';
+  const discount = parseFloat(q('#exp-discount')?.value) || 0;
+  const subtotal = expressCart.reduce((s,i) => s + i.price * i.qty, 0);
+  const total = Math.max(0, subtotal - discount);
+
+  // Save as order
+  const order = {
+    user_id: S.user?.id, client_name: client,
+    items: expressCart.map(i=>({id:i.id,name:i.name,price:i.price,qty:i.qty})),
+    total, discount, status: 'validated', source: 'express',
+    created_at: new Date().toISOString()
+  };
+  try {
+    if (db && S.online) {
+      const ref = await db.collection('orders').add(order);
+      order.id = ref.id; await ref.update({id:ref.id});
+    } else { order.id = Date.now().toString(); }
+    S.orders.unshift(order); LS.s('orders_cache', S.orders);
+    if (mode === 'wa') {
+      let msg = `⚡ *Vente express — ${S.shop?.name||'Boutique'}*\n\nClient : ${client}\n\n`;
+      expressCart.forEach(i => msg += `▪️ *${i.name}* x${i.qty} → ${fmt(i.price*i.qty)}\n`);
+      if (discount > 0) msg += `\n🏷️ Remise : -${fmt(discount)}`;
+      msg += `\n\n*Total : ${fmt(total)}*\n\n_Merci !_ 🙏`;
+      const wa = (S.shop?.wa||'').replace(/\D/g,'');
+      window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+    toast(`✅ Vente de ${fmt(total)} enregistrée !`, 'ok');
+    clearExpress();
+  } catch(e) { toast(e.message,'err'); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F5 — OBJECTIFS DE VENTE
+═══════════════════════════════════════════════════════════ */
+function loadGoals() {
+  const goals = LS.g('sales_goals', {daily:0, monthly:0, orders:0});
+  const gd = q('#goal-daily'); if (gd && goals.daily) gd.value = goals.daily;
+  const gm = q('#goal-monthly'); if (gm && goals.monthly) gm.value = goals.monthly;
+  const go2 = q('#goal-orders'); if (go2 && goals.orders) go2.value = goals.orders;
+  renderGoalProgress();
+}
+
+function saveGoals() {
+  const goals = {
+    daily: parseFloat(q('#goal-daily')?.value) || 0,
+    monthly: parseFloat(q('#goal-monthly')?.value) || 0,
+    orders: parseInt(q('#goal-orders')?.value) || 0,
+  };
+  LS.s('sales_goals', goals);
+  renderGoalProgress();
+}
+
+function renderGoalProgress() {
+  const goals = LS.g('sales_goals', {daily:0, monthly:0, orders:0});
+  const now = new Date();
+  const today = now.toDateString();
+  const todayOrders = S.orders.filter(o => new Date(o.created_at).toDateString() === today);
+  const todaySales = todayOrders.reduce((s,o) => s+(o.total||0), 0);
+  const monthOrders = S.orders.filter(o => { const d=new Date(o.created_at); return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear(); });
+  const monthSales = monthOrders.reduce((s,o) => s+(o.total||0), 0);
+
+  function renderBar(containerId, current, target, label, isMoney) {
+    const el = q(containerId); if (!el || !target) { if(el) el.innerHTML=''; return; }
+    const pct = Math.min(100, (current/target)*100);
+    const col = pct >= 100 ? 'gold' : pct < 30 ? 'danger' : '';
+    el.innerHTML = `
+      <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--t2);margin-bottom:4px">
+        <span>${isMoney?fmt(current):current} / ${isMoney?fmt(target):target} ${label}</span>
+        <span style="font-weight:800;color:${pct>=100?'var(--gold)':pct<30?'var(--err)':'var(--g2)'}">${pct.toFixed(0)}%</span>
+      </div>
+      <div class="goal-bar"><div class="goal-fill ${col}" style="width:${pct}%"></div></div>
+      ${pct>=100?'<div style="font-size:12px;color:var(--gold);font-weight:800;margin-top:4px">🎉 Objectif atteint !</div>':''}`;
+  }
+  renderBar('#goal-daily-progress', todaySales, goals.daily, 'FCFA', true);
+  renderBar('#goal-monthly-progress', monthSales, goals.monthly, 'FCFA', true);
+  renderBar('#goal-orders-progress', monthOrders.length, goals.orders, 'commandes', false);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F6 — PARTAGE PRODUIT DIRECT (injection dans modal produit)
+═══════════════════════════════════════════════════════════ */
+function shareProductWA(productId) {
+  const p = S.products.find(x => x.id === productId);
+  if (!p) return;
+  const shopUrl = window.location.href.split('?')[0] + '?shop=' + encodeURIComponent(S.user?.id||'');
+  let msg = `🛍️ *${p.name}*\n`;
+  if (p.category) msg += `📂 ${p.category}\n`;
+  if (p.description) msg += `📝 ${p.description}\n`;
+  msg += `\n💰 *Prix : ${fmt(p.price)}*`;
+  if (p.stock > 0) msg += `\n✅ En stock (${p.stock} disponibles)`;
+  msg += `\n\n👉 Commander maintenant :\n${shopUrl}`;
+  window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F7 — HORAIRES BOUTIQUE
+═══════════════════════════════════════════════════════════ */
+const DAYS_FR = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+
+function loadSchedule() {
+  const schedule = LS.g('shop_schedule', {});
+  const msg = LS.g('closed_msg', 'Désolé, la boutique est actuellement fermée. Revenez bientôt !');
+  const mc = q('#schedule-closed-msg'); if (mc) mc.value = msg;
+  const el = q('#schedule-days'); if (!el) return;
+  el.innerHTML = DAYS_FR.map((day, i) => {
+    const d = schedule[i] || {open:'08:00', close:'20:00', closed: i===6};
+    return `
+    <div class="sched-day">
+      <div class="sched-day-name">${day.slice(0,3)}</div>
+      <div class="sched-inputs">
+        <input type="time" id="sched-${i}-open" value="${d.open||'08:00'}">
+        <span style="font-size:12px;color:var(--t3)">→</span>
+        <input type="time" id="sched-${i}-close" value="${d.close||'20:00'}">
+      </div>
+      <div onclick="toggleSchedClosed(${i})" style="cursor:pointer">
+        <div class="toggle${d.closed?' on':''}" id="sched-tog-${i}"></div>
+      </div>
+    </div>`;
+  }).join('');
+  // Closed state stored
+  DAYS_FR.forEach((_,i) => {
+    const d = schedule[i] || {closed:i===6};
+    const tog = document.getElementById('sched-tog-'+i);
+    if (tog) tog.classList.toggle('on', !!d.closed);
+  });
+}
+
+function toggleSchedClosed(i) {
+  const tog = document.getElementById('sched-tog-'+i);
+  if (tog) tog.classList.toggle('on');
+}
+
+function saveSchedule() {
+  const schedule = {};
+  DAYS_FR.forEach((_,i) => {
+    schedule[i] = {
+      open: document.getElementById('sched-'+i+'-open')?.value || '08:00',
+      close: document.getElementById('sched-'+i+'-close')?.value || '20:00',
+      closed: document.getElementById('sched-tog-'+i)?.classList.contains('on') || false,
+    };
+  });
+  LS.s('shop_schedule', schedule);
+  const msg = q('#schedule-closed-msg')?.value || '';
+  LS.s('closed_msg', msg);
+  toast('Horaires sauvegardés ✓', 'ok');
+}
+
+function sendClosedMsgWA() {
+  const msg = q('#schedule-closed-msg')?.value || LS.g('closed_msg', '');
+  const wa = (S.shop?.wa||'').replace(/\D/g,'');
+  if (!wa) return toast('Numéro WhatsApp manquant','err');
+  window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(msg), '_blank');
+}
+
+// Helper: check if shop is open right now
+function isShopOpen() {
+  const schedule = LS.g('shop_schedule', {});
+  const now = new Date();
+  const dayIdx = (now.getDay() + 6) % 7; // Monday=0
+  const d = schedule[dayIdx];
+  if (!d || d.closed) return false;
+  const nowMins = now.getHours()*60 + now.getMinutes();
+  const [oh,om] = (d.open||'08:00').split(':').map(Number);
+  const [ch,cm] = (d.close||'20:00').split(':').map(Number);
+  return nowMins >= oh*60+om && nowMins < ch*60+cm;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F8 — ANALYTICS AVANCÉ
+═══════════════════════════════════════════════════════════ */
+function loadAnalytics() {
+  const orders = S.orders;
+  const now = new Date();
+
+  // KPIs
+  const thisMonth = orders.filter(o => { const d=new Date(o.created_at); return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear(); });
+  const lastMonth = orders.filter(o => { const d=new Date(o.created_at); const lm=new Date(now); lm.setMonth(now.getMonth()-1); return d.getMonth()===lm.getMonth()&&d.getFullYear()===lm.getFullYear(); });
+  const revThis = thisMonth.reduce((s,o)=>s+(o.total||0),0);
+  const revLast = lastMonth.reduce((s,o)=>s+(o.total||0),0);
+  const growth = revLast > 0 ? ((revThis-revLast)/revLast*100).toFixed(0) : null;
+  const avgCart = thisMonth.length ? (revThis/thisMonth.length).toFixed(0) : 0;
+  const delivered = orders.filter(o=>o.status==='delivered').length;
+  const convRate = orders.length ? (delivered/orders.length*100).toFixed(0) : 0;
+
+  const kpis = q('#analytics-kpis');
+  if (kpis) kpis.innerHTML = [
+    {v: fmt(revThis), l:'CA ce mois', c:'var(--g2)'},
+    {v: (growth!==null?`${growth>=0?'+':''}${growth}%`:'N/A'), l:'vs mois précédent', c:growth>=0?'var(--ok)':'var(--err)'},
+    {v: fmt(parseInt(avgCart)), l:'Panier moyen', c:'var(--gold)'},
+    {v: convRate+'%', l:'Taux livraison', c:'var(--info)'},
+  ].map(k=>`<div class="analytics-kpi"><div class="analytics-kpi-val" style="color:${k.c}">${k.v}</div><div class="analytics-kpi-lbl">${k.l}</div></div>`).join('');
+
+  // Top 5 products
+  const prodSales = {};
+  orders.forEach(o => (o.items||[]).forEach(i => { prodSales[i.name] = (prodSales[i.name]||0) + (i.qty||1); }));
+  const topProds = Object.entries(prodSales).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const maxSales = topProds[0]?.[1] || 1;
+  const tpEl = q('#analytics-top-products');
+  if (tpEl) tpEl.innerHTML = topProds.length ? topProds.map(([name,qty],i)=>`
+    <div class="top-product-row">
+      <div class="top-product-rank${i===0?' gold':''}">${i+1}</div>
+      <div style="flex:1"><div style="font-size:13px;font-weight:700;color:var(--t1)">${name}</div>
+        <div style="height:4px;background:var(--surf);border-radius:999px;margin-top:4px;overflow:hidden"><div style="height:100%;width:${(qty/maxSales*100).toFixed(0)}%;background:linear-gradient(90deg,var(--g2),var(--g3));border-radius:999px"></div></div>
+      </div>
+      <div style="font-family:var(--fh);font-size:14px;font-weight:800;color:var(--g2)">${qty} vte${qty>1?'s':''}</div>
+    </div>`).join('') : '<p style="color:var(--t3);font-size:13px;text-align:center;padding:var(--s3)">Pas encore de ventes</p>';
+
+  // Activity by hour
+  const hourCounts = new Array(18).fill(0); // hours 6-23
+  orders.forEach(o => { const h = new Date(o.created_at).getHours(); if(h>=6&&h<=23) hourCounts[h-6]++; });
+  const maxH = Math.max(...hourCounts, 1);
+  const ahEl = q('#analytics-hours');
+  if (ahEl) ahEl.innerHTML = hourCounts.map((c,i) => `<div class="hour-bar${c===Math.max(...hourCounts)&&c>0?' peak':''}" style="height:${(c/maxH*100)||5}%" title="${c+6}h: ${c} cmd"></div>`).join('');
+
+  // Funnel
+  const funnelEl = q('#analytics-funnel');
+  if (funnelEl) {
+    const stages = [
+      {l:'Commandes reçues', v:orders.length, c:orders.length},
+      {l:'En attente', v:orders.filter(o=>o.status==='pending').length, c:orders.length},
+      {l:'Validées', v:orders.filter(o=>['validated','delivered'].includes(o.status)).length, c:orders.length},
+      {l:'Livrées', v:delivered, c:orders.length},
+    ];
+    funnelEl.innerHTML = stages.map(s=>`
+      <div class="funnel-row">
+        <div style="width:100px;font-size:11px;color:var(--t2);font-weight:600">${s.l}</div>
+        <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:${s.c?s.v/s.c*100:0}%"></div></div>
+        <div style="width:32px;text-align:right;font-size:12px;font-weight:800;color:var(--g2)">${s.v}</div>
+      </div>`).join('');
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F9 — NOTES INTERNES
+═══════════════════════════════════════════════════════════ */
+function loadNotes() {
+  const notes = LS.g('shop_notes', []);
+  const el = q('#notes-list');
+  if (!el) return;
+  if (!notes.length) { el.innerHTML = '<div class="empty"><p>Aucune note</p><span>Ajoutez vos mémos et rappels</span></div>'; return; }
+  el.innerHTML = notes.slice().reverse().map(n => `
+    <div class="note-card">
+      <div class="note-title">${n.title}</div>
+      <div class="note-body">${n.body}</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">
+        <div class="note-date">${n.date}</div>
+        <button class="btn btn-out sm" style="color:var(--err)" onclick="deleteNote('${n.id}')">🗑</button>
+      </div>
+    </div>`).join('');
+}
+
+function openAddNote() {
+  const ov = document.createElement('div');
+  ov.className = 'overlay open'; ov.id = 'note-overlay';
+  ov.innerHTML = `<div class="modal">
+    <div class="mhandle"></div><div class="mtitle">📝 Nouvelle note</div>
+    <div class="field"><label>Titre</label><div class="iw bare"><input id="note-title" type="text" placeholder="Rappel important..." style="padding-left:14px"></div></div>
+    <div class="field"><label>Contenu</label><div class="iw bare"><textarea id="note-body" placeholder="Détails..." style="padding-left:14px;min-height:100px"></textarea></div></div>
+    <div class="mfooter">
+      <button class="btn btn-out" style="flex:1" onclick="document.getElementById('note-overlay').remove()">Annuler</button>
+      <button class="btn btn-gold" style="flex:2" onclick="saveNote()">📌 Épingler</button>
+    </div>
+  </div>`;
+  ov.addEventListener('click', e => { if(e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+}
+
+function saveNote() {
+  const notes = LS.g('shop_notes', []);
+  const title = q('#note-title')?.value.trim();
+  if (!title) return toast('Titre requis','err');
+  notes.push({
+    id: Date.now().toString(),
+    title,
+    body: q('#note-body')?.value.trim() || '',
+    date: new Date().toLocaleDateString('fr-FR', {day:'2-digit',month:'short',year:'numeric'})
+  });
+  LS.s('shop_notes', notes);
+  document.getElementById('note-overlay')?.remove();
+  toast('Note sauvegardée 📌', 'ok');
+  loadNotes();
+}
+
+function deleteNote(id) {
+  let notes = LS.g('shop_notes', []);
+  notes = notes.filter(n => n.id !== id);
+  LS.s('shop_notes', notes);
+  loadNotes();
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F10 — REMBOURSEMENTS / RETOURS
+═══════════════════════════════════════════════════════════ */
+function loadRefunds() {
+  const refunds = LS.g('refunds', []);
+  const total = refunds.reduce((s,r) => s+(r.amount||0), 0);
+  const tc = q('#refund-count'); if(tc) tc.textContent = refunds.length;
+  const ta = q('#refund-total-amount'); if(ta) ta.textContent = fmt(total);
+  const el = q('#refunds-list');
+  if (!el) return;
+  if (!refunds.length) { el.innerHTML = '<div class="empty"><p>Aucun remboursement</p><span>Pas de retours enregistrés</span></div>'; return; }
+  el.innerHTML = refunds.slice().reverse().map(r => `
+    <div class="refund-card">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div>
+          <div style="font-size:14px;font-weight:800;color:var(--t1)">${r.client||'Client'}</div>
+          <div style="font-size:12px;color:var(--t2);margin:2px 0">${r.reason||'Raison non précisée'}</div>
+          <div style="font-size:11px;color:var(--t3)">${fmtDate(r.date)} · ${r.type==='exchange'?'Échange':'Remboursement'}</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--fh);font-size:16px;font-weight:800;color:var(--err)">-${fmt(r.amount||0)}</div>
+          <button class="btn btn-wa sm" onclick="refundWA('${r.id}')" style="margin-top:4px">💬 WA</button>
+        </div>
+      </div>
+    </div>`).join('');
+}
+
+function openAddRefund() {
+  const ov = document.createElement('div');
+  ov.className = 'overlay open'; ov.id = 'refund-overlay';
+  ov.innerHTML = `<div class="modal">
+    <div class="mhandle"></div><div class="mtitle">↩️ Nouveau retour</div>
+    <div class="field"><label>Nom du client</label><div class="iw bare"><input id="ref-client" type="text" placeholder="Mariam Sawadogo" style="padding-left:14px"></div></div>
+    <div class="field"><label>Montant (FCFA)</label><div class="iw bare"><input id="ref-amount" type="number" inputmode="numeric" placeholder="5000" style="padding-left:14px"></div></div>
+    <div class="field"><label>Raison</label><div class="iw bare"><input id="ref-reason" type="text" placeholder="Produit défectueux, mauvaise taille..." style="padding-left:14px"></div></div>
+    <div class="field"><label>Type</label>
+      <div class="iw bare"><select id="ref-type" style="padding-left:14px">
+        <option value="refund">Remboursement cash</option>
+        <option value="exchange">Échange produit</option>
+        <option value="credit">Avoir en boutique</option>
+      </select></div>
+    </div>
+    <div class="mfooter">
+      <button class="btn btn-out" style="flex:1" onclick="document.getElementById('refund-overlay').remove()">Annuler</button>
+      <button class="btn btn-danger" style="flex:2" onclick="saveRefund()">Enregistrer</button>
+    </div>
+  </div>`;
+  ov.addEventListener('click', e => { if(e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+}
+
+function saveRefund() {
+  const refunds = LS.g('refunds', []);
+  const client = q('#ref-client')?.value.trim();
+  const amount = parseFloat(q('#ref-amount')?.value) || 0;
+  if (!client) return toast('Nom client requis','err');
+  refunds.push({
+    id: Date.now().toString(),
+    client, amount,
+    reason: q('#ref-reason')?.value.trim() || '',
+    type: q('#ref-type')?.value || 'refund',
+    date: new Date().toISOString()
+  });
+  LS.s('refunds', refunds);
+  document.getElementById('refund-overlay')?.remove();
+  toast('Retour enregistré', 'ok');
+  loadRefunds();
+}
+
+function refundWA(id) {
+  const refunds = LS.g('refunds', []);
+  const r = refunds.find(x=>x.id===id);
+  if (!r) return;
+  const typeNames = {refund:'un remboursement', exchange:'un échange', credit:'un avoir'};
+  const msg = `↩️ *Retour/Remboursement — ${S.shop?.name||'Boutique'}*\n\nBonjour ${r.client},\n\nNous avons bien pris en compte votre demande de ${typeNames[r.type]||'retour'} de *${fmt(r.amount)}*.\n\nRaison : ${r.reason||'N/A'}\n\nMerci de votre compréhension. 🙏`;
+  const wa = (S.shop?.wa||'').replace(/\D/g,'');
+  window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(msg), '_blank');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F11 — INDICATEUR HORAIRES DANS TOPBAR
+═══════════════════════════════════════════════════════════ */
+function updateShopStatusBadge() {
+  const badge = document.getElementById('shop-status-badge');
+  if (!badge) return;
+  const open = isShopOpen();
+  badge.textContent = open ? '● Ouvert' : '● Fermé';
+  badge.style.color = open ? 'var(--ok)' : 'var(--err)';
+}
+setInterval(updateShopStatusBadge, 60000);
+
+/* ═══════════════════════════════════════════════════════════
+   F12 — SAUVEGARDE AUTO FIREBASE (toutes les 5 min)
+═══════════════════════════════════════════════════════════ */
+let _autoSaveTimer = null;
+function startAutoSave() {
+  if (_autoSaveTimer) clearInterval(_autoSaveTimer);
+  _autoSaveTimer = setInterval(async () => {
+    if (!db || !S.online || !S.user) return;
+    try {
+      await db.collection('users').doc(S.user.id).update({
+        last_seen: new Date().toISOString(),
+        products_count: S.products.length,
+        orders_count: S.orders.length,
+      });
+    } catch {}
+  }, 5 * 60 * 1000);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F13 — RECHERCHE GLOBALE DANS L'APP
+═══════════════════════════════════════════════════════════ */
+function openGlobalSearch() {
+  const ov = document.createElement('div');
+  ov.className = 'overlay open'; ov.id = 'gsearch-overlay';
+  ov.innerHTML = `<div class="modal" style="max-height:80vh">
+    <div class="mhandle"></div>
+    <div style="position:relative;margin-bottom:var(--s3)">
+      <svg style="position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--t3)" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input id="gsearch-input" class="sin" style="border-radius:var(--r12)" placeholder="Rechercher produits, commandes, clients..." autofocus oninput="doGlobalSearch(this.value)">
+    </div>
+    <div id="gsearch-results" style="max-height:50vh;overflow-y:auto"></div>
+  </div>`;
+  ov.addEventListener('click', e => { if(e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+  setTimeout(() => q('#gsearch-input')?.focus(), 100);
+}
+
+function doGlobalSearch(val) {
+  const el = q('#gsearch-results'); if (!el) return;
+  if (!val.trim()) { el.innerHTML = ''; return; }
+  const v = val.toLowerCase();
+  const prods = S.products.filter(p => p.name.toLowerCase().includes(v)||(p.category||'').toLowerCase().includes(v)).slice(0,4);
+  const ords = S.orders.filter(o => (o.client_name||'').toLowerCase().includes(v)||(o.id||'').includes(v)).slice(0,3);
+  let html = '';
+  if (prods.length) { html += `<div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">📦 Produits</div>`; html += prods.map(p=>`<div onclick="document.getElementById('gsearch-overlay').remove();openEditProduct('${p.id}')" style="display:flex;align-items:center;gap:var(--s2);padding:var(--s2);border-radius:var(--r8);cursor:pointer;background:var(--surf);margin-bottom:6px"><div style="flex:1"><div style="font-size:14px;font-weight:700">${p.name}</div><div style="font-size:11px;color:var(--t3)">${p.category||''} · ${fmt(p.price)}</div></div></div>`).join(''); }
+  if (ords.length) { html += `<div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:.5px;margin:var(--s2) 0 6px">🛍️ Commandes</div>`; html += ords.map(o=>`<div onclick="document.getElementById('gsearch-overlay').remove();go('orders')" style="display:flex;align-items:center;gap:var(--s2);padding:var(--s2);border-radius:var(--r8);cursor:pointer;background:var(--surf);margin-bottom:6px"><div style="flex:1"><div style="font-size:14px;font-weight:700">${o.client_name}</div><div style="font-size:11px;color:var(--t3)">${fmt(o.total||0)} · ${fmtDate(o.created_at)}</div></div></div>`).join(''); }
+  if (!html) html = '<div style="text-align:center;color:var(--t3);padding:var(--s4)">Aucun résultat trouvé</div>';
+  el.innerHTML = html;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F14 — BADGE PERFORMANCE DASHBOARD (% croissance)
+═══════════════════════════════════════════════════════════ */
+function loadDashboardBadge() {
+  const now = new Date();
+  const thisMonth = S.orders.filter(o => { const d=new Date(o.created_at); return d.getMonth()===now.getMonth()&&d.getFullYear()===now.getFullYear(); });
+  const lastMonth = S.orders.filter(o => { const d=new Date(o.created_at); const lm=new Date(now); lm.setMonth(now.getMonth()-1); return d.getMonth()===lm.getMonth()&&d.getFullYear()===lm.getFullYear(); });
+  const revThis = thisMonth.reduce((s,o)=>s+(o.total||0),0);
+  const revLast = lastMonth.reduce((s,o)=>s+(o.total||0),0);
+  const badgeEl = document.getElementById('dash-growth-badge');
+  if (!badgeEl) return;
+  if (revLast > 0) {
+    const g = ((revThis-revLast)/revLast*100).toFixed(0);
+    badgeEl.textContent = (g>=0?'▲ +':'▼ ')+g+'% vs mois dernier';
+    badgeEl.style.color = g>=0 ? 'var(--ok)' : 'var(--err)';
+    badgeEl.style.display = 'block';
+  } else { badgeEl.style.display = 'none'; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   F15 — RÉPONSE RAPIDE COMMANDES (boutons action en 1 clic)
+═══════════════════════════════════════════════════════════ */
+function quickReplyOrder(orderId, action) {
+  const o = S.orders.find(x => x.id === orderId);
+  if (!o) return;
+  const wa = (S.shop?.wa||'').replace(/\D/g,'');
+  const msgs = {
+    confirm: `✅ Bonjour ${o.client_name} !\n\nVotre commande #${orderId.slice(-6)} de *${fmt(o.total||0)}* est *confirmée* !\n\nNous vous contacterons pour la livraison. Merci ! 🙏\n\n— ${S.shop?.name}`,
+    ready: `📦 Bonjour ${o.client_name} !\n\nVotre commande est *prête* et sera livrée très prochainement.\n\nMontant : *${fmt(o.total||0)}*\n\n— ${S.shop?.name}`,
+    delivered: `🎉 Bonjour ${o.client_name} !\n\nVotre commande a bien été *livrée*. Profitez-en !\n\nMerci de votre confiance et n'hésitez pas à laisser un avis. ⭐\n\n— ${S.shop?.name}`,
+    delay: `⏳ Bonjour ${o.client_name},\n\nNous vous informons d'un léger délai sur votre commande. Nous faisons au plus vite !\n\nToutes nos excuses pour la gêne occasionnée. 🙏\n\n— ${S.shop?.name}`,
+  };
+  if (msgs[action]) {
+    window.open('https://wa.me/'+wa+'?text='+encodeURIComponent(msgs[action]), '_blank');
+    if (action === 'delivered') updateOrderStatus(orderId, 'delivered');
+    if (action === 'confirm') updateOrderStatus(orderId, 'validated');
+  }
+}
+
+/* ─── Init des nouvelles fonctionnalités au démarrage ─── */
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    startAutoSave();
+    updateShopStatusBadge();
+    // Ajouter bouton recherche globale dans la topbar du dashboard
+    const tb = document.querySelector('#scr-dashboard .topbar');
+    if (tb) {
+      const searchBtn = document.createElement('button');
+      searchBtn.className = 'btn btn-ghost icon';
+      searchBtn.onclick = openGlobalSearch;
+      searchBtn.innerHTML = '<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>';
+      const tr = tb.querySelector('.topbar-r');
+      if (tr) tr.prepend(searchBtn);
+    }
+    // Ajouter badge croissance dans le dashboard
+    const dashHead = document.querySelector('.dash-head');
+    if (dashHead && !document.getElementById('dash-growth-badge')) {
+      const badge = document.createElement('div');
+      badge.id = 'dash-growth-badge';
+      badge.style.cssText = 'font-size:11px;font-weight:700;margin-top:6px;display:none;padding:2px 8px;background:rgba(255,255,255,.1);border-radius:999px;display:inline-block';
+      dashHead.appendChild(badge);
+    }
+  }, 2000);
+});
+
+// Patch loadDashboard to also load badge
+const _origLoadDash = loadDashboard;
+window.loadDashboard = async function() {
+  await _origLoadDash.apply(this, arguments);
+  loadDashboardBadge();
+};
+
+// Patch renderOrders to add quick reply buttons
+const _origRenderOrders = renderOrders;
+window.renderOrders = function(sf='all') {
+  _origRenderOrders(sf);
+  // Add quick reply buttons to order cards
+  setTimeout(() => {
+    document.querySelectorAll('.ocard').forEach(card => {
+      if (card.dataset.qrAdded) return;
+      card.dataset.qrAdded = '1';
+      const actions = card.querySelector('.oactions');
+      if (!actions) return;
+      const orderId = card.dataset.oid;
+      if (!orderId) return;
+      const quickDiv = document.createElement('div');
+      quickDiv.style.cssText = 'display:flex;gap:4px;width:100%;margin-top:4px;flex-wrap:wrap';
+      quickDiv.innerHTML = `
+        <button class="btn sm" style="flex:1;background:rgba(16,185,129,.1);color:var(--ok);font-size:11px" onclick="quickReplyOrder('${orderId}','confirm')">✅ Confirmer</button>
+        <button class="btn sm" style="flex:1;background:rgba(33,150,243,.1);color:var(--info);font-size:11px" onclick="quickReplyOrder('${orderId}','ready')">📦 Prêt</button>
+        <button class="btn sm" style="flex:1;background:rgba(13,110,79,.1);color:var(--g1);font-size:11px" onclick="quickReplyOrder('${orderId}','delivered')">🚚 Livré</button>
+      `;
+      actions.after(quickDiv);
+    });
+  }, 100);
+};
+
 
 </script>
 
